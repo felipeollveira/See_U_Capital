@@ -1,0 +1,8 @@
+{
+    "builds": [
+        {
+            "src": "frontend/public/**/*",
+            "use": "@vercel/static"
+        }
+    ]
+}       
