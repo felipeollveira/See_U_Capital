@@ -1,7 +1,7 @@
 // tailwind.config.js
 module.exports = {
   content: [
-    "./public/**/*.{html,js}"
+    "./app/**/*.{html,js}"
   ],
   theme: {
     extend: {},
