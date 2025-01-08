@@ -8,6 +8,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     color: white;
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     background-color: black;
@@ -82,4 +83,25 @@ main{
     display: flex;
     align-items: center;
     flex-shrink: 0;
+}
+
+/* CAPITAL */
+
+.box-capital{
+    width: 80%;
+    height: 40rem;
+    border-radius: 26px;
+    border: 1px solid #2C2C2C;
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(88.0999984741211px);
+}
+
+.colorGreen{
+    color: #4E9B7F;
+}
+
+.shadowTitulo{
+    filter: drop-shadow(6px 2px 5.8px rgba(78, 155, 110, 0.30));
+    font-weight: 300;
 }

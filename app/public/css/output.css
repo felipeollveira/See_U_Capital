@@ -1009,6 +1009,15 @@ html {
   margin-bottom: 3.5rem;
 }
 
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .mt-20 {
   margin-top: 5rem;
 }
@@ -1017,8 +1026,28 @@ html {
   margin-top: 1.75rem;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
 .w-full {
   width: 100%;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.p-0 {
+  padding: 0px;
 }
 
 .px-48 {
@@ -1033,6 +1062,15 @@ html {
 
 .text-center {
   text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-5xl {
@@ -1130,6 +1168,28 @@ main{
   flex-shrink: 0;
 }
 
+/* CAPITAL */
+
+.box-capital{
+  width: 80%;
+  height: 40rem;
+  border-radius: 26px;
+  border: 1px solid #2C2C2C;
+  background: rgba(255, 255, 255, 0.01);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(88.0999984741211px);
+          backdrop-filter: blur(88.0999984741211px);
+}
+
+.colorGreen{
+  color: #4E9B7F;
+}
+
+.shadowTitulo{
+  filter: drop-shadow(6px 2px 5.8px rgba(78, 155, 110, 0.30));
+  font-weight: 300;
+}
+
 @media not all and (min-width: 1024px) {
   .max-lg\:px-0 {
     padding-left: 0px;
@@ -1139,5 +1199,10 @@ main{
   .max-lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .max-lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
