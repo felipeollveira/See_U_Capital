@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/output.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body id="capital">
   <nav class="mt-7 w-full">
     <a class="btn btn-ghost" href="../index.html">
       <img src="../imgs/logo.png" width="110" alt="logo">
@@ -15,28 +15,34 @@
   </nav>
   
   <main>
-    <div class="box-capital my-16 w-96 h-96">
-        <header class="mt-16 d-flex items-center justify-center">
+    <div class="box-capital skeleton my-16 w-[70%] max-lg:w-[100%]">
+      <div id="conteudo">
+        <header class="mt-16 d-flex items-center justify-center text-center">
             <h2 class="shadowTitulo  text-2xl max-lg:text-base">BEM VINDO A  
                 <div class="colorGreen text-center">SEE U <b class="font-bold">CAPITAL</b></div>
             </h2>
         </header>
 
-        <div>
-            <p>Nosso objetivo é ajudar você a organizar suas finanças de forma prática, proporcionando clareza sobre seus gastos.
-                Para começar, faremos algumas perguntas simples. Fique à vontade para <b>compartilhar apenas o que desejar</b>
-                 — todas as informações ficam exclusivamente com você.
-                 <b>Respeitamos sua privacidade</b> e garantimos que não coletamos ou armazenamos dados pessoais, seguindo rigorosamente a 
-                 <b>LGPD (Lei Geral de Proteção de Dados).</b> 
-                Estamos aqui para facilitar sua jornada rumo à saúde financeira. Vamos juntos?</p>
+        <div class="mt-6 mx-20 text-justify text-[20px] max-lg:mx-5 text-base">
+          <p>Nosso objetivo é ajudar você a organizar suas finanças de forma prática, proporcionando clareza sobre seus gastos. <br>
+              Para começar, faremos algumas perguntas simples. Fique à vontade para <b>compartilhar apenas o que desejar</b>
+                — todas as informações ficam exclusivamente com você.
+                <b>Respeitamos sua privacidade</b> e garantimos que não coletamos ou armazenamos dados pessoais, seguindo rigorosamente a 
+                <b>LGPD (Lei Geral de Proteção de Dados).</b> <br>
+              Estamos aqui para facilitar sua jornada rumo à saúde financeira. <br>
+              Vamos juntos?</p>
         </div>
         
-        <a href=""></a>
+        <button class="btn btn-comecar mt-10 mb-16">VAMOS COMEÇAR?</button>
+      </div>
     </div>
   </main>
 
-  <footer class= "py-5 w-full text-center">
-    <p class="text-xs montserrat">© 2025 See U Capital. Todos os direitos reservados</p>
+  <footer class= "py-5 w-full flex items-center justify-center max-lg: px-5">
+    <p class="text-sm text-justify font-light max-lg:text-xs">
+      ESSE SITE NÃO ARMANEZA NENHUM DADO E SEGUE TODA AS LEIS EM VIGOR DA<br class="max-lg:hidden">
+      <b class="font-bold">LGPD</b> DE ACORDO COM O <b class="font-bold">ARTIGO 153 DA LEI GERAL DE PROTEÇÃO DE DADOS</b>
+    </p>
   </footer>
 </body>
 </html>

@@ -3,16 +3,25 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     color: white;
     font-family: Montserrat, Arial, Helvetica, sans-serif;
-    background-color: black;
-    background: url(../imgs/noise.png), url(../imgs/bg.png) no-repeat center; 
+    background: url(../imgs/noise.png) no-repeat center, url(../imgs/bg.png) no-repeat center; 
     background-size: cover;
 }
 
@@ -23,6 +32,7 @@ nav{
 }
 
 main{
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,44 +41,8 @@ main{
     width: 90%;
 }
 
-.titulo{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.titulo h1{
-    color: #FFF;
-    font-weight: 400;
-    text-align: center;
-    font-style: normal;
-}
-
-.texto{
-    flex-shrink: 0;
-}
-
-.texto p{
-    color: #FFF;
-    text-align: center;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 300;
-}
-
-.texto b{
-    font-weight: 600;
-}
-
-.button-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.button-div .btn-comecar{
+#home .button-div .btn-comecar,
+#capital .box-capital .btn-comecar{
     width: 249px;
     border-radius: 25px;
     flex-shrink: 0;
@@ -79,17 +53,52 @@ main{
     box-shadow: 0px 0px 38.4px 0px rgba(13, 243, 159, 0.48);
 }
 
-.cartoes{
+/* INDEX (HOME) */
+#home .titulo{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#home .titulo h1{
+    color: #FFF;
+    font-weight: 400;
+    text-align: center;
+    font-style: normal;
+}
+
+#home .texto{
+    flex-shrink: 0;
+}
+
+#home .texto p{
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+#home .texto b{
+    font-weight: 600;
+}
+
+#home .button-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#home .cartoes{
     display: flex;
     align-items: center;
     flex-shrink: 0;
 }
 
 /* CAPITAL */
-
 .box-capital{
-    width: 80%;
-    height: 40rem;
     border-radius: 26px;
     border: 1px solid #2C2C2C;
     background: rgba(255, 255, 255, 0.01);
