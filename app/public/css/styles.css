@@ -42,7 +42,7 @@ main{
 }
 
 #home .button-div .btn-comecar,
-#capital .box-capital .btn-comecar{
+#capital .btn-comecar{
     width: 249px;
     border-radius: 25px;
     flex-shrink: 0;
@@ -51,6 +51,12 @@ main{
     color: white;
     background-color: #4E9B7F;
     box-shadow: 0px 0px 38.4px 0px rgba(13, 243, 159, 0.48);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
 }
 
 /* INDEX (HOME) */
@@ -98,14 +104,6 @@ main{
 }
 
 /* CAPITAL */
-.box-capital{
-    border-radius: 26px;
-    border: 1px solid #2C2C2C;
-    background: rgba(255, 255, 255, 0.01);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(88.0999984741211px);
-}
-
 .colorGreen{
     color: #4E9B7F;
 }
@@ -113,4 +111,25 @@ main{
 .shadowTitulo{
     filter: drop-shadow(6px 2px 5.8px rgba(78, 155, 110, 0.30));
     font-weight: 300;
+}
+
+/* CAPITAL RENDA */
+.input-numeric{
+    border-radius: 38px;
+    border: 1px solid #4E9B6E;
+    background: rgba(217, 217, 217, 0.00);
+    
+}
+
+#capital form .btn-voltar{
+    border-radius: 39.837px;
+    border: 0.669px solid #2BD999;
+    background: rgba(78, 155, 127, 0.00);
+}
+
+#capital form .btn-proximo{
+    color: white;
+    border-radius: 39.837px;
+    border: 0.669px solid #2BD999;
+    background: #4E9B7F;
 }

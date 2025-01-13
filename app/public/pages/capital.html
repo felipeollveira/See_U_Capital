@@ -6,6 +6,7 @@
     <title>SEE U CAPITAL</title>
     <link rel="stylesheet" href="../css/output.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body id="capital">
   <nav class="mt-7 w-full">
@@ -15,9 +16,9 @@
   </nav>
   
   <main>
-    <div class="box-capital skeleton my-16 w-[70%] max-lg:w-[100%]">
+    <div id="termo" class="w-[70%] max-lg:w-[100%]">
       <div id="conteudo">
-        <header class="mt-16 d-flex items-center justify-center text-center">
+        <header class="mt d-flex items-center justify-center text-center">
             <h2 class="shadowTitulo  text-2xl max-lg:text-base">BEM VINDO A  
                 <div class="colorGreen text-center">SEE U <b class="font-bold">CAPITAL</b></div>
             </h2>
@@ -33,9 +34,30 @@
               Vamos juntos?</p>
         </div>
         
-        <button class="btn btn-comecar mt-10 mb-16">VAMOS COMEÇAR?</button>
+        <button id="btnComecar" class="btn btn-comecar mt-10 mb-10">VAMOS COMEÇAR?</button>
       </div>
     </div>
+
+    <form id="formulario" class="hidden absolute max-xl:flex-col">
+      <div id="rendaBruta">
+        <h2 class="text-5xl max-lg:text-3xl">Qual o valor total da sua renda mensal?</h2>
+
+        <input 
+          class="input input-numeric mt-10 w-[881px] h-[44px] max-xl:w-80 h-10" 
+          inputmode="numeric" 
+          type="number" 
+          maxlength="7" 
+          oninput="this.value = this.value.slice(0, 7)"
+          placeholder="EX: 1500, 3000, 4000" 
+          required
+        >
+      </div>
+
+      <div class="mt-80 max-xl:mt-10">
+        <button class="btn btn-voltar">VOLTAR</button>
+        <button class="btn btn-proximo shadowTitulo">PRÓXIMO</button>
+      </div>
+    </form>
   </main>
 
   <footer class= "py-5 w-full flex items-center justify-center max-lg: px-5">
@@ -44,5 +66,7 @@
       <b class="font-bold">LGPD</b> DE ACORDO COM O <b class="font-bold">ARTIGO 153 DA LEI GERAL DE PROTEÇÃO DE DADOS</b>
     </p>
   </footer>
+
+<script src="../js/script.js"></script>
 </body>
 </html>
