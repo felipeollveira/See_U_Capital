@@ -1,24 +1,26 @@
 /* TERMO */
 @keyframes hiddenExit {
 	0% {
+		position:fixed;
 		opacity: 1;
 		transform: scale(1);
 	}
 
 	100% {
+		position:fixed;
 		opacity: 0;
-		transform: scale(0.6);
         display: none;
+		transform: scale(0.6);
 	}
 }
 
 .hiddenBox{
     overflow: hidden;
-    animation: hiddenExit 2s ease 0s 1 normal forwards;
+    animation: hiddenExit 1s ease 0s 1 normal forwards;
 }
 
 /* FORMULARIO */
-@keyframes FadeIn {
+@keyframes FadeInRight {
 	0% {
 		opacity: 0;
 		transform: translateY(50px);
@@ -31,7 +33,39 @@
 }
 
 .rendaAnimation{
-    animation: FadeIn 2s ease 0s 1 normal forwards;
+    animation: FadeInRight 1s ease 0s 1 normal forwards;
 }
 
+/* PERGUNTAS (VOLTAR) */
+@keyframes fadeOutBottom {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 
+	100% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+}
+
+.voltarAnimation{
+	animation: fadeOutBottom 1s ease 0s 1 normal forwards;
+}
+
+/* PERGUNTAS (PRÓXIMO) */
+@keyframes fadeRight {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.proximoAnimation{
+	animation: fadeRight 1s ease 0s 1 normal forwards;
+}

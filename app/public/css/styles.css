@@ -41,6 +41,14 @@ main{
     width: 90%;
 }
 
+p{
+color: #FFF;
+text-align: justify;
+font-family: Montserrat;
+font-style: normal;
+line-height: 150%; /* 45px */
+}
+
 #home .button-div .btn-comecar,
 #capital .btn-comecar{
     width: 249px;
@@ -104,10 +112,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /* CAPITAL */
-.colorGreen{
-    color: #4E9B7F;
-}
-
 .shadowTitulo{
     filter: drop-shadow(6px 2px 5.8px rgba(78, 155, 110, 0.30));
     font-weight: 300;
@@ -122,6 +126,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 #capital form .btn-voltar{
+    color: white;
     border-radius: 39.837px;
     border: 0.669px solid #2BD999;
     background: rgba(78, 155, 127, 0.00);

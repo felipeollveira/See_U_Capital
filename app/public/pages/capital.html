@@ -16,57 +16,215 @@
   </nav>
   
   <main>
-    <div id="termo" class="w-[70%] max-lg:w-[100%]">
-      <div id="conteudo">
-        <header class="mt d-flex items-center justify-center text-center">
-            <h2 class="shadowTitulo  text-2xl max-lg:text-base">BEM VINDO A  
-                <div class="colorGreen text-center">SEE U <b class="font-bold">CAPITAL</b></div>
-            </h2>
-        </header>
-
-        <div class="mt-6 mx-20 text-justify text-[20px] max-lg:mx-5 text-base">
-          <p>Nosso objetivo é ajudar você a organizar suas finanças de forma prática, proporcionando clareza sobre seus gastos. <br>
-              Para começar, faremos algumas perguntas simples. Fique à vontade para <b>compartilhar apenas o que desejar</b>
-                — todas as informações ficam exclusivamente com você.
-                <b>Respeitamos sua privacidade</b> e garantimos que não coletamos ou armazenamos dados pessoais, seguindo rigorosamente a 
-                <b>LGPD (Lei Geral de Proteção de Dados).</b> <br>
-              Estamos aqui para facilitar sua jornada rumo à saúde financeira. <br>
-              Vamos juntos?</p>
-        </div>
-        
-        <button id="btnComecar" class="btn btn-comecar mt-10 mb-10">VAMOS COMEÇAR?</button>
-      </div>
+    <div id="termo" class="flex flex-col py-10">
+      <p class="text-[30px] font-light px-96 max-2xl:text-lg max-2xl:px-72 max-sm:text-sm max-xl:px-0">
+        Nosso objetivo é ajudar você a organizar suas finanças de forma prática, proporcionando clareza sobre seus gastos. <br>
+        Para começar, faremos algumas perguntas simples. Fique à vontade para <b>compartilhar apenas o que desejar</b>
+        — todas as informações ficam exclusivamente com você.
+        <b class="font-semibold">Respeitamos sua privacidade</b> e garantimos que não coletamos ou armazenamos dados pessoais, seguindo rigorosamente a 
+        <b class="font-semibold">LGPD (Lei Geral de Proteção de Dados).</b> <br>
+        Estamos aqui para facilitar sua jornada rumo à saúde financeira. Vamos juntos?</p>        
+          
+        <button id="btnComecar" class="btn btn-comecar mx-auto mt-10 mb-10 max-2xl:mt-10 max-2xl:mb-0">VAMOS COMEÇAR?</button>
     </div>
 
-    <form id="formulario" class="hidden absolute max-xl:flex-col">
-      <div id="rendaBruta">
-        <h2 class="text-5xl max-lg:text-3xl">Qual o valor total da sua renda mensal?</h2>
+    <form id="formulario" class="w-full mx-5 hidden flex-col">
+      <div id="ref-ganhos" class="etapa flex-col gap-7">
+        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Ganhos,</b></h1>
+        
+        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Qual o valor total da sua renda mensal?</h2>
 
-        <input 
-          class="input input-numeric mt-10 w-[881px] h-[44px] max-xl:w-80 h-10" 
-          inputmode="numeric" 
+        <input
+          id="renda-mensal"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="renda-mensal"
           type="number" 
-          maxlength="7" 
-          oninput="this.value = this.value.slice(0, 7)"
-          placeholder="EX: 1500, 3000, 4000" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+          required
+        >
+      
+        <h2 class="text-5xl text-start font-light mt-12 max-2xl:text-2xl max-lg:text-lg">Quanto você recebe, em média, de outras fontes além do salário principal?</h2>
+
+        <input
+          id="outras-fontes"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="outras-fontes"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
           required
         >
       </div>
 
-      <div class="mt-80 max-xl:mt-10">
-        <button class="btn btn-voltar">VOLTAR</button>
-        <button class="btn btn-proximo shadowTitulo">PRÓXIMO</button>
+      <div id="ref-despesas-residenciais1" class="hidden etapa flex-col gap-7">
+        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Despesas Residenciais,</b></h1>
+        
+        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Quanto você gasta, em média, com a conta de água?</h2>
+
+        <input
+          id="agua"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="agua"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+          required
+        >
+      
+        <h2 class="text-5xl text-start font-light mt-12 max-2xl:text-2xl max-lg:text-lg">E com a conta de luz, qual é o valor aproximado?</h2>
+
+        <input
+          id="luz"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="luz"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+          required
+        >
+      </div>
+
+      <div id="ref-despesas-residenciais2" class="hidden etapa flex-col gap-7">
+        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Despesas Residenciais,</b></h1>
+        
+        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Qual o custo mensal do seu plano de Internet?</h2>
+
+        <input
+          id="internet"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="internet"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+          required
+        >
+      
+        <h2 class="text-5xl text-start font-light mt-12 max-2xl:text-2xl max-lg:text-lg">Qual é o valor médio das compras do mês?</h2>
+
+        <input
+          id="compras"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="compras"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+          required
+        >
+      </div>
+
+      <div id="ref-saude" class="hidden etapa flex-col gap-7">
+        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Saúde,</b></h1>
+        
+        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Qual o valor médio gasto com consultas e exames médicos?</h2>
+
+        <input
+          id="exames"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="exames"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+          required
+        >
+      
+        <h2 class="text-5xl text-start font-light mt-12 max-2xl:text-2xl max-lg:text-lg">Quanto você investe mensalmente em medicamentos?</h2>
+
+        <input
+          id="medicamentos"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="medicamentos"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+          required
+        >
+      </div>
+
+      <div id="ref-lazer" class="hidden etapa flex-col gap-7">
+        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Lazer,</b></h1>
+        
+        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Quanto você gasta, em média, com viagens e passeios?</h2>
+
+        <input
+          id="lazer"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="lazer"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+          required
+        >
+      </div>
+
+      <div id="ref-transporte" class="hidden etapa flex-col gap-7">
+        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Transporte,</b></h1>
+        
+        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Qual é o custo mensal com transporte (combustível, transporte público, etc.)?</h2>
+
+        <input
+          id="transporte"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="transporte"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+          required
+        >
+      </div>
+
+      <div id="ref-financas" class="hidden etapa flex-col gap-7">
+        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Finanças,</b></h1>
+        
+        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Quanto você consegue economizar ou guardar por mês?</h2>
+
+        <input
+          id="financas"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="financas"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+          required
+        >
+      </div>
+
+      <div class="flex m-auto my-24 gap-4 max-2xl:my-16 max-2xl:mb-8">
+        <button id="btnVoltar" class="btn btn-voltar" type="button">VOLTAR</button>
+        <button id="btnProximo" class="btn btn-proximo shadowTitulo" type="button">PRÓXIMO</button>
       </div>
     </form>
   </main>
 
-  <footer class= "py-5 w-full flex items-center justify-center max-lg: px-5">
-    <p class="text-sm text-justify font-light max-lg:text-xs">
-      ESSE SITE NÃO ARMANEZA NENHUM DADO E SEGUE TODA AS LEIS EM VIGOR DA<br class="max-lg:hidden">
+  <footer class= "py-5 px-5">
+    <p class="text-sm text-justify font-light max-xl:text-xs">
+      ESSE SITE NÃO ARMANEZA NENHUM DADO E SEGUE TODA AS LEIS EM VIGOR DA<br class="max-xl:hidden">
       <b class="font-bold">LGPD</b> DE ACORDO COM O <b class="font-bold">ARTIGO 153 DA LEI GERAL DE PROTEÇÃO DE DADOS</b>
     </p>
   </footer>
-
-<script src="../js/script.js"></script>
+  <script src="../js/form.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
