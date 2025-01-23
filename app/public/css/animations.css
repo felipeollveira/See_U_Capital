@@ -1,17 +1,21 @@
 /* TERMO */
 @keyframes hiddenExit {
-	0% {
-		position:fixed;
-		opacity: 1;
-		transform: scale(1);
-	}
-
-	100% {
-		position:fixed;
-		opacity: 0;
-        display: none;
-		transform: scale(0.6);
-	}
+    0% {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.6);
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 .hiddenBox{
@@ -20,7 +24,7 @@
 }
 
 /* FORMULARIO */
-@keyframes FadeInRight {
+@keyframes fadeInBottom {
 	0% {
 		opacity: 0;
 		transform: translateY(50px);
@@ -32,29 +36,12 @@
 	}
 }
 
-.rendaAnimation{
-    animation: FadeInRight 1s ease 0s 1 normal forwards;
+.formAnimation{
+    animation: fadeInBottom 2s ease 0s 1 normal forwards;
 }
 
-/* PERGUNTAS (VOLTAR) */
-@keyframes fadeOutBottom {
-	0% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	100% {
-		opacity: 0;
-		transform: translateY(50px);
-	}
-}
-
-.voltarAnimation{
-	animation: fadeOutBottom 1s ease 0s 1 normal forwards;
-}
-
-/* PERGUNTAS (PRÓXIMO) */
-@keyframes fadeRight {
+/* ADICIONAR INPUT */
+@keyframes fadeInRight {
 	0% {
 		opacity: 0;
 		transform: translateX(50px);
@@ -66,6 +53,6 @@
 	}
 }
 
-.proximoAnimation{
-	animation: fadeRight 1s ease 0s 1 normal forwards;
+.inputAnimation{
+    animation: fadeInRight 2s ease 0s 1 normal forwards;
 }

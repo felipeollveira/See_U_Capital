@@ -3,8 +3,6 @@ const formData = {};
 
 // Acesso nos elementos HTML
 const form = document.getElementById('formulario'); // Elemento do formulário principal
-const btnVoltar = document.getElementById('btnVoltar'); // Botão para voltar às etapas anteriores
-const btnProximo = document.getElementById('btnProximo'); // Botão para avançar para a próxima etapa
 
 // Salvamento temporário de valores do input
 form.addEventListener('input', (e) => {
@@ -14,58 +12,25 @@ form.addEventListener('input', (e) => {
     console.log(formData); // Exibe o estado atual de `formData` no console
 });
 
-// Variável que controla a etapa atual do formulário
-let etapaAtual = 0;
+// Função para adicionar novos inputs
+function addInput(){
+    // Seleciona todos os inputs dentro da div com id "outros"
+    const inputs = document.querySelectorAll('#ref-outros input');
+    let inputRevealed = false; // Variável para verificar se algum input foi mostrado
 
-// Obtém o número total de etapas (baseado na classe `.etapa`)
-const totalEtapas = document.querySelectorAll('.etapa').length;
-
-// Função para controle de etapas do formulário
-function controleEtapas() {
-    // Seleciona todas as etapas e aplica as classes adequadas para exibição ou ocultação
-    document.querySelectorAll('.etapa').forEach((etapa, index) => {
-        if (index === etapaAtual) {
-            // Exibe a etapa atual
-            etapa.classList.remove('absolute', 'hidden', 'voltarAnimation');
-            etapa.classList.add('flex');
-            etapa.classList.add('proximoAnimation');
-        } else if (index < etapaAtual) {
-            // Define o estado para as etapas anteriores (ocultadas com animação de volta)
-            etapa.classList.add('absolute', 'hidden', 'voltarAnimation');
-            etapa.classList.remove('proximoAnimation');
-        } else {
-            // Define o estado para as etapas posteriores (ocultadas com animação de avanço)
-            etapa.classList.add('absolute', 'hidden', 'proximoAnimation');
-            etapa.classList.remove('voltarAnimation');
+    // Procura o primeiro input desabilitado e habilita
+    for (let input of inputs){
+        if (input.classList.contains('hidden')){
+            input.classList.remove('hidden'); // Remove a classe "hidden"
+            input.classList.add('inputAnimation'); // Remove a classe "hidden"
+            inputRevealed = true; // Indica que um input foi revelado
+            break; // Para o loop após exibir um input
         }
-    });
+    }
+
+    // Verifica se todos os inputs já foram exibidos
+    if (!inputRevealed) {
+        const inputButton = document.querySelector('#ref-outros button');
+        inputButton.disabled = true; // Desabilita o botão quando todos os inputs estiverem visíveis
+    }
 }
-
-// Evento de avanço no formulário
-btnProximo.addEventListener('click', () => {
-    // Captura todos os inputs da etapa atual
-    const campos = document.querySelectorAll(`.etapa`)[etapaAtual].querySelectorAll('input');
-    
-    // Salva os valores dos campos no objeto `formData`
-    campos.forEach((campo) => {
-        formData[campo.id] = campo.value;
-    });
-
-    // Avança para a próxima etapa se não for a última
-    if (etapaAtual < totalEtapas - 1) {
-        etapaAtual++; // Incrementa a etapa atual
-        controleEtapas(); // Atualiza a interface do formulário
-    }
-});
-
-// Evento de retrocesso no formulário
-btnVoltar.addEventListener('click', () => {
-    // Volta para a etapa anterior se não estiver na primeira
-    if (etapaAtual > 0) {
-        etapaAtual--; // Decrementa a etapa atual
-        controleEtapas(); // Atualiza a interface do formulário
-    }
-});
-
-// Inicializa o formulário na primeira etapa
-controleEtapas();
