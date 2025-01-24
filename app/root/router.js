@@ -12,4 +12,19 @@ router.get('/', (req, res) => {
     }
 });
 
+router.post('/dashboard', (req, res) => {
+  const formData = req.body;
+
+  //console.log('Dados do formulário recebidos:', formData);
+
+  const labels = Object.keys(formData); 
+  const valores = Object.values(formData).map(value => Number(value)); 
+
+
+  res.render('grafico', {
+    labels: JSON.stringify(labels),
+    valores: JSON.stringify(valores), 
+  });
+});
+  
 module.exports = router; 
