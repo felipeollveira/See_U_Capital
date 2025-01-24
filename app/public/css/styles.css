@@ -1,3 +1,140 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    background: url(../imgs/noise.png) no-repeat center, url(../imgs/bg.png) no-repeat center; 
+    background-size: cover;
+}
+
+nav{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+}
+
+p{
+color: #FFF;
+text-align: justify;
+font-family: Montserrat;
+font-style: normal;
+line-height: 150%; /* 45px */
+}
+
+#home .button-div .btn-comecar,
+#capital .btn-comecar{
+    width: 249px;
+    border-radius: 25px;
+    flex-shrink: 0;
+    font-weight: 400;
+    border: none;
+    color: white;
+    background-color: #4E9B7F;
+    box-shadow: 0px 0px 38.4px 0px rgba(13, 243, 159, 0.48);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+}
+
+/* INDEX (HOME) */
+#home .titulo{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#home .titulo h1{
+    color: #FFF;
+    font-weight: 400;
+    text-align: center;
+    font-style: normal;
+}
+
+#home .texto{
+    flex-shrink: 0;
+}
+
+#home .texto p{
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+#home .texto b{
+    font-weight: 600;
+}
+
+#home .button-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#home .cartoes{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* CAPITAL */
+.shadowTitulo{
+    filter: drop-shadow(6px 2px 5.8px rgba(78, 155, 110, 0.30));
+    font-weight: 300;
+}
+
+/* CAPITAL RENDA */
+.input-numeric{
+    border-radius: 38px;
+    border: 1px solid #4E9B6E;
+    background: rgba(217, 217, 217, 0.00);
+    
+}
+
+#capital form .btn-voltar{
+    color: white;
+    border-radius: 39.837px;
+    border: 0.669px solid #2BD999;
+    background: rgba(78, 155, 127, 0.00);
+}
+
+#capital form .btn-proximo{
+    color: white;
+    border-radius: 39.837px;
+    border: 0.669px solid #2BD999;
+    background: #4E9B7F;
+}

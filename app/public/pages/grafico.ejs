@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Donut - SEE U CAPITAL</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Resumo Financeiro</h1>
+        <canvas id="graficoDonut"></canvas>
+        <button onclick="window.location.href='/'">Voltar para a Home</button>
+    </div>
+
+    <script>
+        // Dados passados pelo backend
+        const labels = <%- labels %>; // Labels vindos do backend
+        const valores = <%- valores %>; // Valores vindos do backend
+
+        // Configurando o gráfico
+        const ctx = document.getElementById('graficoDonut').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: valores,
+                    backgroundColor: ['#4CAF50', '#FF5722', '#FFEB3B', '#3F51B5', '#00BCD4'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                },
+            }
+        });
+    </script>
+</body>
+</html>
