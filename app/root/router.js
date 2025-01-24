@@ -12,19 +12,18 @@ router.get('/', (req, res) => {
     }
 });
 
-router.post('/submit', (req, res) => {
+router.post('/dashboard', (req, res) => {
   const formData = req.body;
 
-  console.log('Dados do formulário recebidos:', formData);
+  //console.log('Dados do formulário recebidos:', formData);
+
+  const labels = Object.keys(formData); 
+  const valores = Object.values(formData).map(value => Number(value)); 
 
 
-  const labels = Object.keys(formData); // Pegando as chaves como labels
-  const valores = Object.values(formData).map(value => Number(value)); // Pegando os valores numéricos
-
-  // Renderizando a página do gráfico
   res.render('grafico', {
-    labels: JSON.stringify(labels), // Enviando labels para o frontend
-    valores: JSON.stringify(valores), // Enviando valores para o frontend
+    labels: JSON.stringify(labels),
+    valores: JSON.stringify(valores), 
   });
 });
   

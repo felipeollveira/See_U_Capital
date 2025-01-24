@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gráfico de Donut - SEE U CAPITAL</title>
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Resumo Financeiro</h1>
         <canvas id="graficoDonut"></canvas>
-        <button onclick="window.location.href='/'">Voltar para a Home</button>
     </div>
-
+    
+    <button onclick="window.location.href='/'" class="btn btn-proximo shadowTitulo">Voltar para a Home</button>
     <script>
         // Dados passados pelo backend
         const labels = <%- labels %>; // Labels vindos do backend
