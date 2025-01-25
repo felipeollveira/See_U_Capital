@@ -1844,6 +1844,10 @@ html:has(.drawer-toggle:checked) {
   gap: 1.75rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .bg-base-200 {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity, 1)));
@@ -1878,6 +1882,111 @@ html:has(.drawer-toggle:checked) {
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.px-96 {
+  padding-left: 24rem;
+  padding-right: 24rem;
+}
+
+.px-52 {
+  padding-left: 13rem;
+  padding-right: 13rem;
+}
+
+.px-40 {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.px-36 {
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-32 {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-28 {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-72 {
+  padding-left: 18rem;
+  padding-right: 18rem;
+}
+
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.px-80 {
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.px-\[\] {
+  padding-left: ;
+  padding-right: ;
+}
+
+.px-\[80px\] {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.px-\[30rem\] {
+  padding-left: 30rem;
+  padding-right: 30rem;
+}
+
+.px-\[20rem\] {
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.px-\[21rem\] {
+  padding-left: 21rem;
+  padding-right: 21rem;
+}
+
+.px-\[22rem\] {
+  padding-left: 22rem;
+  padding-right: 22rem;
+}
+
+.px-\[23rem\] {
+  padding-left: 23rem;
+  padding-right: 23rem;
+}
+
+.px-\[52\] {
+  padding-left: 52;
+  padding-right: 52;
+}
+
+.px-\[96\] {
+  padding-left: 96;
+  padding-right: 96;
 }
 
 .text-center {
@@ -1926,6 +2035,11 @@ html:has(.drawer-toggle:checked) {
   line-height: 1.25rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1950,6 +2064,34 @@ html:has(.drawer-toggle:checked) {
   letter-spacing: 4.6px;
 }
 
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+
+.tracking-\[\] {
+  letter-spacing: ;
+}
+
+.tracking-\[177\%\] {
+  letter-spacing: 177%;
+}
+
+.tracking-\[177\] {
+  letter-spacing: 177;
+}
+
+.tracking-\[46\.54px\%\] {
+  letter-spacing: 46.54px%;
+}
+
+.tracking-\[46\.54p\] {
+  letter-spacing: 46.54p;
+}
+
+.tracking-\[46\.54px\] {
+  letter-spacing: 46.54px;
+}
+
 .text-base-content {
   --tw-text-opacity: 1;
   color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity, 1)));
@@ -1962,6 +2104,10 @@ html:has(.drawer-toggle:checked) {
 
 .underline {
   text-decoration-line: underline;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 /* GERAL */
@@ -1996,7 +2142,7 @@ body#capital{
 }
 
 body#sobre, body#dicas{
-  background: url(../imgs/noise.png) center no-repeat, url(../imgs/bg.png) center no-repeat;
+  background: url(../imgs/noise.png) center no-repeat, url(../imgs/bg_sobre-dicas.png) center no-repeat;
   background-size: cover;
 }
 
@@ -2149,6 +2295,11 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 600px;
   }
 
+  .max-2xl\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
   .max-2xl\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2168,11 +2319,20 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+
+  .max-2xl\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 
 @media not all and (min-width: 1024px) {
   .max-lg\:mr-0 {
     margin-right: 0px;
+  }
+
+  .max-lg\:mt-5 {
+    margin-top: 1.25rem;
   }
 
   .max-lg\:hidden {
@@ -2196,23 +2356,9 @@ input[type="number"]::-webkit-outer-spin-button {
     padding-right: 0px;
   }
 
-  .max-lg\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .max-lg\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
   .max-lg\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .max-lg\:text-center {
-    text-align: center;
   }
 
   .max-lg\:text-justify {
@@ -2247,11 +2393,6 @@ input[type="number"]::-webkit-outer-spin-button {
   .max-lg\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-
-  .max-lg\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 
   .max-lg\:tracking-widest {

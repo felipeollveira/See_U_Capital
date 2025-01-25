@@ -35,7 +35,7 @@ body#capital{
 }
 
 body#sobre, body#dicas{
-    background: url(../imgs/noise.png) center no-repeat, url(../imgs/bg.png) center no-repeat;
+    background: url(../imgs/noise.png) center no-repeat, url(../imgs/bg_sobre-dicas.png) center no-repeat;
     background-size: cover;
 }
 

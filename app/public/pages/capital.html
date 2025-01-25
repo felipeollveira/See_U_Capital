@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/output.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/animations.css">
+    <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
 </head>
 <body id="capital">
   <nav class="flex items-center justify-around p-10 w-full">
@@ -43,8 +44,8 @@
         <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 bg-green">
           <!-- Sidebar content here -->
           <li class="text-white"><a href="../index.html">Inicio</a></li>
-          <li class="text-white"><a href="./pages/sobre.html">Sobre nós</a></li>
-          <li class="text-white"><a href="./pages/dicas.html">Dicas</a></li>
+          <li class="text-white"><a href="./sobre.html">Sobre nós</a></li>
+          <li class="text-white"><a href="./dicas.html">Dicas</a></li>
           <br>
 
           <a href="./capital.html" class="btn btn-comecar absolute mx-auto bottom-5 right-0 left-0">COMECE AGORA</a>
@@ -309,8 +310,11 @@
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
         >
-
-        <button type="button" id class="btn w-5" onclick="addInput()">+</button>
+        <div class="flex gap-3">
+          <button type="button" id="btn_mais" class="btn w-5" onclick="addInput()">+</button>
+          <button type="button" id="btn_menos" class="btn w-5 hidden" onclick="removeInput()">-</button>
+        </div>
+ 
 
       </div>
 
@@ -321,7 +325,7 @@
   </main>
 
   <footer class= "py-10 text-center">
-    <p class="text-sm font-light tracking-[4.6px] max-lg:text-xs max-lg:tracking-widest">TODOS OS DIREITOS RESERVADOS</p>
+    <p class="text-sm font-light tracking-[4.6px] max-2xl:text-xs max-lg:tracking-widest">TODOS OS DIREITOS RESERVADOS</p>
   </footer>
   <script src="../js/form.js"></script>
   <script src="../js/script.js"></script>
