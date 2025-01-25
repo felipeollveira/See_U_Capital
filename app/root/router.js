@@ -18,7 +18,7 @@ router.post('/dashboard', (req, res) => {
   //console.log('Dados do formulário recebidos:', formData);
 
   const labels = Object.keys(formData); 
-  const valores = Object.values(formData).map(value => Number(value)); 
+  const valores = Object.values(formData).map(value => Number(value));
 
 
   res.render('grafico', {
