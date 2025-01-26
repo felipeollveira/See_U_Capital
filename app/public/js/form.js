@@ -67,6 +67,7 @@ btnVoltar.addEventListener('click', () => {
         etapaAtual--;
         controleEtapas();
     }
+    
 });
 
 // Inicializa o formulário na primeira etapa
