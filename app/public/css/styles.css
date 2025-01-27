@@ -145,7 +145,7 @@ input[type="number"]::-webkit-outer-spin-button {
     font-weight: 300;
 }
 
-/* CAPITAL RENDA */
+/* CAPITAL FORM */
 .form{
     border-radius: 10px;
     border: 2px solid #374957;
@@ -158,5 +158,29 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 38px;
     border: 1px solid #4E9B6E;
     background: rgba(217, 217, 217, 0.00);
+}
+
+/* CAPITAL GRAFICO */
+.btn-voltar{
+    color: white;
+    background-color: transparent;
     
+    border-radius: 39.837px;
+    border: 0.669px solid #2BD999;
+}
+.btn-voltar:hover{
+    border: 0.669px solid #2BD999;
+    background-color: #2bd99917;
+}
+
+.btn-pdf{
+    color: white;
+    border-radius: 39.837px;
+    box-shadow: 0px 0px 21.795px 0px rgba(13, 243, 159, 0.48);
+    border: 0.669px solid #2BD999;
+    background: #4E9B7F;
+}
+.btn-pdf:hover{
+    border: 0.669px solid #4e9b7f9c;
+    background: #4aac889c;
 }

@@ -9,7 +9,6 @@ form.addEventListener('input', (e) => {
     e.preventDefault(); // Evita o comportamento padrão do evento (caso seja envio do formulário)
     const { id, value } = e.target; // Captura o id e o valor do campo de entrada
     formData[id] = value; // Atualiza o objeto `formData` com os valores fornecidos
-    console.log(formData); // Exibe o estado atual de `formData` no console
 });
 
 // Função para adicionar novos inputs

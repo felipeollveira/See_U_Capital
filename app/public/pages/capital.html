@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/animations.css">
     <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body id="capital">
   <nav class="flex items-center justify-around p-10 w-full">
@@ -55,7 +58,7 @@
   </nav>
   
   <main>
-    <div id="termo" class="flex flex-col w-[72%] max-2xl:my-10 max-lg:w-full">
+    <div id="termo" class="flex flex-col py-10 w-[72%] max-lg:w-full">
       <h1 class="text-center text-4xl font-bold mb-10 max-2xl:text-3xl max-lg:text-lg">Termos & Condições</h1>
 
       <p class="text-2xl font-light text-justify leading-[177%] max-2xl:text-xl max-lg:text-base">
@@ -319,9 +322,18 @@
       </div>
 
       <div class="flex m-auto my-24 gap-4 max-2xl:my-16 max-2xl:mb-8">
-        <button id="gerar-grafico" class="btn btn-grafico shadowTitulo mx-auto" type="button">GERAR GRÁFICO</button>
+        <button id="gerar-grafico" class="btn btn-grafico shadowTitulo mx-auto" type="submit">GERAR GRÁFICO</button>
       </div>
     </form>
+
+    <div id="box-grafico" class="hidden flex-col justify-center items-center">
+      <div id="graficos" class="p-16"></div>
+
+      <div class="flex gap-5">
+        <button class="btn btn-voltar" onclick="voltarFormulario()">Voltar</button>
+        <button class="btn btn-pdf" onclick="gerarPDF()">Salvar PDF</button>
+      </div>
+    </div>
   </main>
 
   <footer class= "py-10 text-center">
@@ -329,5 +341,6 @@
   </footer>
   <script src="../js/form.js"></script>
   <script src="../js/script.js"></script>
+  <script src="../js/financial-report-generator.js"></script>
 </body>
 </html>
