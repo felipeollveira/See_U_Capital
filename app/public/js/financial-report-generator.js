@@ -130,17 +130,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Gerar PDF
-async function gerarPDF(){
-    const graficosFinanceiros = document.getElementById('graficos-financeiros')
-
+async function gerarPDF() {
     try {
-        const canvas = await html2canvas(graficosFinanceiros, {
-            scale: 2,
-            useCORS: true,
-            logging: true // Ative logs para depuração
+        // Selecionar o corpo do documento
+        const body = document.body;
+
+        // Configurar o html2canvas para capturar todo o conteúdo
+        const canvas = await html2canvas(body, {
+            scale: 2, // Aumenta a qualidade da captura
+            useCORS: true, // Permite carregar imagens externas
+            scrollX: 0, // Evita problemas de deslocamento horizontal
+            scrollY: 0, // Evita problemas de deslocamento vertical
+            windowWidth: document.documentElement.scrollWidth, // Largura total do documento
+            windowHeight: document.documentElement.scrollHeight // Altura total do documento
         });
 
+        // Converter o canvas para imagem
+        const imgData = canvas.toDataURL('image/png', 1.0);
+
+        // Criar o PDF
         const { jsPDF } = window.jspdf;
         const pdf = new jsPDF({
             orientation: 'p',
@@ -148,17 +156,33 @@ async function gerarPDF(){
             format: 'a4'
         });
 
-        const imgWidth = 195; // Largura da imagem no PDF
-        const imgHeight = canvas.height * imgWidth / canvas.width; // Altura proporcional
-        const imgData = canvas.toDataURL('image/png');
+        // Dimensões do PDF
+        const pageWidth = pdf.internal.pageSize.getWidth();
+        const pageHeight = pdf.internal.pageSize.getHeight();
 
-        pdf.addImage(imgData, 'PNG', 7, 10, imgWidth, imgHeight);
-        pdf.save('Relatorio_Financeiro.pdf');
+        // Dimensões da imagem
+        const imgWidth = pageWidth;
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        // Adicionar a imagem ao PDF
+        let position = 0;
+
+        while (position < imgHeight) {
+            pdf.addImage(imgData, 'PNG', 0, -position, imgWidth, imgHeight);
+            position += pageHeight;
+
+            if (position < imgHeight) {
+                pdf.addPage();
+            }
+        }
+
+        // Salvar o PDF
+        pdf.save('Relatorio_Financeiro_Completo.pdf');
     } catch (error) {
         console.error('Erro ao gerar o PDF:', error);
         alert('Ocorreu um erro ao gerar o PDF. Verifique os logs do console.');
     }
- }
+}
 
 function voltarFormulario(){
     const form = document.getElementById('formulario');
