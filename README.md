@@ -13,9 +13,8 @@ Possue o objetivo de promover a conscientização e o controle financeiro por me
 1. **NodeJS**: compilador JavaScript, melhor para exportação de bibliotecas
 
 2. **Express**: Para criação de rotas
-3. **ExcelJS**: Para exportar Excel
-4. **Pdf-creator-node**: Para exportar PDF
-5. **ChartJS**: Criação de gráfico
+
+3. **ChartJS**: Criação de gráfico
 
 ### Front-end
 
