@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body id="capital">
-  <nav class="flex items-center justify-around p-10 w-full">
+  <nav class="flex items-center justify-between px-20 p-10 w-full max-lg:px-5">
     <a class="btn btn-ghost" href="../index.html">
       <img src="../imgs/logo.png" width="110" alt="logo">
     </a>
@@ -21,7 +21,7 @@
     <div class="flex gap-16 max-lg:hidden">
       <a href="../index.html">Inicio</a>
       <a href="./sobre.html">Sobre nós</a>
-      <a href="./dicas.html">Dicas</a>
+      <a href="./sugestoes.html">Sugestões</a>
     </div>
 
     <div class="flex justify-end drawer drawer-end z-10 lg:hidden">
@@ -48,7 +48,7 @@
           <!-- Sidebar content here -->
           <li class="text-white"><a href="../index.html">Inicio</a></li>
           <li class="text-white"><a href="./sobre.html">Sobre nós</a></li>
-          <li class="text-white"><a href="./dicas.html">Dicas</a></li>
+          <li class="text-white"><a href="./sugestoes.html">Sugestões</a></li>
           <br>
 
           <a href="./capital.html" class="btn btn-comecar absolute mx-auto bottom-5 right-0 left-0">COMECE AGORA</a>
@@ -61,17 +61,10 @@
     <div id="termo" class="flex flex-col py-10 w-[72%] max-lg:w-full">
       <h1 class="text-center text-4xl font-bold mb-10 max-2xl:text-3xl max-lg:text-lg">Termos & Condições</h1>
 
-      <p class="text-2xl font-light text-justify leading-[177%] max-2xl:text-xl max-lg:text-base">
-        Nosso objetivo é ajudar você a <b class="font-bold">organizar suas finanças</b> de maneira <b class="font-bold">prática e eficiente,</b>proporcionando uma visão clara e detalhada sobre seus gastos. Sabemos como pode ser desafiador gerenciar as finanças pessoais, e estamos aqui para simplificar esse processo para você, sem complicação.
+      <p class="text-2xl font-light text-justify leading-[177%] max-2xl:text-xl max-2xl:leading-[177%] max-lg:text-base">
+        Em nosso site, sua <b class="font-bold">privacidade</b> e <b class="font-bold">segurança</b> são nossas maiores prioridades. Garantimos que <b class="font-bold">não armazenamos</b>, <b class="font-bold">não registramos</b> e não compartilhamos nenhum dado pessoal ou financeiro inserido por você. <b class="font-bold">Todas as informações fornecidas dura  nte o uso do nosso site são processadas exclusivamente para gerar os cálculos solicitados e, após a finalização do processo, são descartadas imediatamente.</b>
         <br>
-        
-        Para começar, faremos algumas perguntas simples, pensadas para facilitar a compreensão da sua situação financeira atual. Você pode responder de forma tranquila, <b class="font-bold">compartilhando apenas o que se sentir confortável</b> — lembrando sempre que todas as informações fornecidas permanecem exclusivamente com você.
-        <br>
-        
-        Respeitamos totalmente sua privacidade, e garantimos que não coletamos nem armazenamos dados pessoais. Cumprimos rigorosamente com a <b class="font-bold underline"><a href="https://www.gov.br/esporte/pt-br/acesso-a-informacao/lgpd">Lei Geral de Proteção de Dados (LGPD)</a></b>, priorizando a segurança e o sigilo de suas informações.
-        <br>
-
-        Estamos aqui para caminhar com você em cada etapa dessa jornada. Vamos juntos?
+        Não há nenhum armazenamento de dados a longo prazo, o que significa que <b class="font-bold">nenhuma informação será retida ou utilizada para outros fins.</b> Você pode usar nosso serviço com total confiança, sabendo que seus dados permanecem privados e seguros. Nossa missão é fornecer uma ferramenta útil e eficiente, sem comprometer sua privacidade ou segurança em momento algum.
       </p>
        
       <button id="btnComecar" class="btn btn-comecar mt-10 mx-auto">VAMOS COMEÇAR?</button>
@@ -327,9 +320,9 @@
     </form>
 
     <div id="box-grafico" class="hidden flex-col justify-center items-center">
-      <div id="graficos" class="p-16"></div>
+      <div id="graficos" class="p-16 flex flex-col gap-10"></div>
 
-      <div class="flex gap-5">
+      <div class="flex gap-5 mt-10">
         <button class="btn btn-voltar" onclick="voltarFormulario()">Voltar</button>
         <button class="btn btn-pdf" onclick="gerarPDF()">Salvar PDF</button>
       </div>

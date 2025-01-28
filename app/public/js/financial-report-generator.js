@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         graficosDiv.id = 'graficos-financeiros';
         
         graficosDiv.innerHTML = `
-            <h1 class="text-3xl">Relatório Financeiro</h1>
+            <h1 class="text-4xl font-bold mb-10">Relatório Financeiro</h1>
             <canvas id="grafico-receitas" class="w-[400px] h-[200px] max-sm:w-[350px] max-sm:h-[150px]"></canvas>
             <canvas id="grafico-despesas" class="w-[400px] h-[200px] max-sm:w-[350px] max-sm:h-[150px]"></canvas>
         `;
@@ -140,7 +140,7 @@ async function gerarPDF() {
     try {
         // Selecionar o corpo do documento
         const body = document.body;
-
+ 
         // Configurar o html2canvas para capturar todo o conteúdo
         const canvas = await html2canvas(body, {
             scale: 2, // Aumenta a qualidade da captura

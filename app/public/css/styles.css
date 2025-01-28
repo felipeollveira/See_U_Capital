@@ -95,25 +95,11 @@ input[type="number"]::-webkit-outer-spin-button {
     background-color: #316350;
 }
 
+.font-montserrat{
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
 /* INDEX (HOME) */
-#home .titulo{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-#home .titulo h1{
-    color: #FFF;
-    font-weight: 400;
-    text-align: center;
-    font-style: normal;
-}
-
-#home .texto{
-    flex-shrink: 0;
-}
-
 #home .texto p{
     color: #FFF;
     text-align: center;
@@ -164,7 +150,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .btn-voltar{
     color: white;
     background-color: transparent;
-    
     border-radius: 39.837px;
     border: 0.669px solid #2BD999;
 }
@@ -183,4 +168,24 @@ input[type="number"]::-webkit-outer-spin-button {
 .btn-pdf:hover{
     border: 0.669px solid #4e9b7f9c;
     background: #4aac889c;
+}
+
+/* --SUGESTÕES-- */
+
+.box_sugestao{
+    border-radius: 46.324px;
+    border: 1.077px solid rgba(255, 255, 255, 0.00);
+    background: rgba(55, 73, 87, 0.12);
+    backdrop-filter: blur(16.429000854492188px);
+}
+@media not all and (min-width: 1024px) {
+    .max-lg\:bg-transparent {
+        background: transparent;
+    }
+}
+
+.passo{
+    border-radius: 26.469px;
+    border: 1px solid rgba(0, 0, 0, 0.00);
+    background: linear-gradient(144deg, rgba(78, 155, 127, 0.18) 0%, rgba(21, 38, 64, 0.18) 100%);
 }
