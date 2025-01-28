@@ -53,10 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
             { nome: 'Água', valor: formData.agua },
             { nome: 'Luz', valor: formData.luz },
             { nome: 'Internet', valor: formData.internet },
-            { nome: 'Exames', valor: formData.exames },
             { nome: 'Medicamentos', valor: formData.medicamentos },
             { nome: 'Lazer', valor: formData.lazer },
-            { nome: 'Transporte', valor: formData.transporte }
+            { nome: 'Transporte', valor: formData.transporte },
+            { nome: 'gas', valor: formData.gas },
+            { nome: 'exames', valor: formData.exames },
+            { nome: 'outros1', valor: formData.outros1 },
+            { nome: 'outros2', valor: formData.outros2 },
+            { nome: 'outros3', valor: formData.outros3 },
+            { nome: 'outros4', valor: formData.outros4 },
+            { nome: 'outros5', valor: formData.outros5 }
         ];
 
         // Ordenar despesas do maior para o menor
@@ -82,9 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
         new Chart(ctx1, {
             type: 'pie',
             data: {
-                labels: [...tresMaioresDespesas.map(d => d.nome), 'Receita Total'],
+                labels: [...tresMaioresDespesas.map(d => d.nome)],
                 datasets: [{
-                    data: [...tresMaioresDespesas.map(d => d.valor), totalReceita],
+                    data: [...tresMaioresDespesas.map(d => d.valor)],
                     backgroundColor: [
                         ...chartColors.despesas.slice(0, tresMaioresDespesas.length),
                         chartColors.receitas
