@@ -1646,16 +1646,16 @@ html {
   height: 1.25rem;
 }
 
-.h-\[300px\] {
-  height: 300px;
-}
-
 .h-\[44px\] {
   height: 44px;
 }
 
 .h-\[656px\] {
   height: 656px;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .min-h-full {
@@ -1674,12 +1674,12 @@ html {
   width: 24rem;
 }
 
-.w-\[46rem\] {
-  width: 46rem;
+.w-\[400px\] {
+  width: 400px;
 }
 
-.w-\[500px\] {
-  width: 500px;
+.w-\[46rem\] {
+  width: 46rem;
 }
 
 .w-\[72\%\] {
@@ -1765,6 +1765,10 @@ html {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .p-7 {
@@ -2104,9 +2108,13 @@ input[type="number"]::-webkit-outer-spin-button {
           backdrop-filter: blur(16.429000854492188px);
 }
 
-@media not all and (min-width: 1024px) {
-  .max-lg\:bg-transparent {
+@media not all and (min-width: 640px) {
+  .sm {
+    border-radius: 0px;
+    border: 0px;
     background: transparent;
+    width: 100%;
+    padding: 0px;
   }
 }
 
@@ -2194,10 +2202,6 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: column;
   }
 
-  .max-lg\:bg-transparent {
-    background-color: transparent;
-  }
-
   .max-lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -2247,12 +2251,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media not all and (min-width: 640px) {
-  .max-sm\:h-\[150px\] {
-    height: 150px;
+  .max-sm\:h-full {
+    height: 100%;
   }
 
-  .max-sm\:w-\[350px\] {
-    width: 350px;
+  .max-sm\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .max-sm\:w-full {
+    width: 100%;
   }
 
   .max-sm\:text-2xl {
@@ -2263,6 +2271,12 @@ input[type="number"]::-webkit-outer-spin-button {
   .max-sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .max-\[450px\]\:w-full {
+    width: 100%;
   }
 }
 

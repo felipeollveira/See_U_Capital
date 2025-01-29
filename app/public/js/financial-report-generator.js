@@ -1,14 +1,25 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('formulario');
     const btnGrafico = document.getElementById('gerar-grafico');
     const boxGrafico = document.getElementById('box-grafico')
     const graficos = document.getElementById('graficos')
 
-    // Cores 
+    // Cores expandidas para cada categoria
     const chartColors = {
         receitas: 'rgb(54, 162, 235)', // Azul
-        financas: 'rgb(75, 192, 192)', // Verde-água
-        despesas: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 206, 86)'] // Vermelho, Azul, Amarelo
+        agua: 'rgb(0, 128, 255)',      // Azul claro
+        luz: 'rgb(255, 193, 7)',       // Amarelo
+        internet: 'rgb(156, 39, 176)', // Roxo
+        gas: 'rgb(255, 87, 34)',       // Laranja
+        compras: 'rgb(76, 175, 80)',   // Verde
+        exames: 'rgb(233, 30, 99)',    // Rosa
+        medicamentos: 'rgb(0, 150, 136)', // Verde-água
+        lazer: 'rgb(121, 85, 72)',     // Marrom
+        transporte: 'rgb(63, 81, 181)', // Azul escuro
+        financas: 'rgb(75, 192, 192)',  // Verde-água claro
+        outros: 'rgb(158, 158, 158)'    // Cinza
     };
 
     btnGrafico.addEventListener('click', async (e) => {
@@ -53,7 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const economia = formData.financas;
         const outros = formData.outros1 + formData.outros2 + formData.outros3 + formData.outros4 + formData.outros5;
 
-        
+        // Calcular total de outros
+        const outrosTotal = formData.outros1 + formData.outros2 + formData.outros3 + formData.outros4 + formData.outros5;        
 
         // // Calcular totais e identificar 3 principais despesas
         // const totalReceita = formData.rendaMensal;
@@ -77,10 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
         graficosDiv.id = 'graficos-financeiros';
         
         graficosDiv.innerHTML = `
-            <canvas id="grafico-receitas" class="w-[500px] h-[300px] max-sm:w-[350px] max-sm:h-[150px]"></canvas>
+            <canvas id="grafico-receitas" class="p-5 w-[400px] h-full max-[450px]:w-full"></canvas>
             <br>
-            <br>
-            <canvas id="grafico-despesas" class="w-[500px] h-[300px] max-sm:w-[350px] max-sm:h-[150px]"></canvas>
+            <canvas id="grafico-despesas" class="w-[400px] h-full max-[450px]:w-full"></canvas>
         `;
         graficos.appendChild(graficosDiv);
         boxGrafico.classList.add('flex');
@@ -143,11 +154,69 @@ document.addEventListener('DOMContentLoaded', () => {
         new Chart(ctx2, {
             type: 'bar',
             data: {
-                labels: ['Gráfico Detalhado'],
-                datasets: [{
-                    label: 'Renda Mensal',
-                    data: [formData.rendaMensal],
-                }]
+                labels: [''], // Label vazio para remover a palavra "Valor"
+                datasets: [
+                    {
+                        label: 'Água',
+                        data: [formData.agua],
+                        backgroundColor: chartColors.agua
+                    },
+                    {
+                        label: 'Luz',
+                        data: [formData.luz],
+                        backgroundColor: chartColors.luz
+                    },
+                    {
+                        label: 'Internet',
+                        data: [formData.internet],
+                        backgroundColor: chartColors.internet
+                    },
+                    {
+                        label: 'Gás',
+                        data: [formData.gas],
+                        backgroundColor: chartColors.gas
+                    },
+                    {
+                        label: 'Compras',
+                        data: [formData.compras],
+                        backgroundColor: chartColors.compras
+                    },
+                    {
+                        label: 'Exames',
+                        data: [formData.exames],
+                        backgroundColor: chartColors.exames
+                    },
+                    {
+                        label: 'Medicamentos',
+                        data: [formData.medicamentos],
+                        backgroundColor: chartColors.medicamentos
+                    },
+                    {
+                        label: 'Lazer',
+                        data: [formData.lazer],
+                        backgroundColor: chartColors.lazer
+                    },
+                    {
+                        label: 'Transporte',
+                        data: [formData.transporte],
+                        backgroundColor: chartColors.transporte
+                    },
+                    {
+                        label: 'Finanças',
+                        data: [formData.financas],
+                        backgroundColor: chartColors.financas
+                    },
+                    {
+                        label: 'Outros',
+                        data: [outrosTotal],
+                        backgroundColor: chartColors.outros
+                    },
+                    {
+                        label: 'Renda Mensal',
+                        data: [formData.rendaMensal],
+                        backgroundColor: chartColors.receitas
+                    }
+                ]
             },
             options: {
                 responsive: false,
@@ -156,8 +225,33 @@ document.addEventListener('DOMContentLoaded', () => {
                     title: {
                         display: true,
                         text: 'Detalhamento de Despesas e Receitas'
+                    },
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        align: 'center',
+                        labels: {
+                            boxWidth: 12,
+                            padding:10,
+                            font: {
+                                size: window.innerWidth < 768 ? 9 : 14 // Ajusta dinamicamente
+                            }
+                        }
                     }
-                }
+                },
+                scales: {
+                    x: {
+                        display: false // Oculta completamente o eixo X
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return 'R$ ' + value.toFixed(2);
+                            }
+                        }
+                    }
+                }     
             }
         });
     });

@@ -171,16 +171,19 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /* --SUGESTÕES-- */
-
 .box_sugestao{
     border-radius: 46.324px;
     border: 1.077px solid rgba(255, 255, 255, 0.00);
     background: rgba(55, 73, 87, 0.12);
     backdrop-filter: blur(16.429000854492188px);
 }
-@media not all and (min-width: 1024px) {
-    .max-lg\:bg-transparent {
+@media not all and (min-width: 640px) {
+    .sm {
+        border-radius: 0px;
+        border: 0px;
         background: transparent;
+        width: 100%;
+        padding: 0px;
     }
 }
 
