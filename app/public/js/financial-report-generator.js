@@ -46,55 +46,53 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Calcular totais e identificar 3 principais despesas
-        const totalReceita = formData.rendaMensal;
-        const despesasArray = [
-            { nome: 'Compras', valor: formData.compras },
-            { nome: 'Água', valor: formData.agua },
-            { nome: 'Luz', valor: formData.luz },
-            { nome: 'Internet', valor: formData.internet },
-            { nome: 'Medicamentos', valor: formData.medicamentos },
-            { nome: 'Lazer', valor: formData.lazer },
-            { nome: 'Transporte', valor: formData.transporte },
-            { nome: 'gas', valor: formData.gas },
-            { nome: 'exames', valor: formData.exames },
-            { nome: 'outros1', valor: formData.outros1 },
-            { nome: 'outros2', valor: formData.outros2 },
-            { nome: 'outros3', valor: formData.outros3 },
-            { nome: 'outros4', valor: formData.outros4 },
-            { nome: 'outros5', valor: formData.outros5 }
-        ];
+        const despesasResidenciais = formData.agua + formData.luz + formData.internet + formData.gas + formData.compras;
+        const despesasSaude = formData.exames + formData.medicamentos;
+        const lazer = formData.lazer;
+        const transporte = formData.transporte;
+        const economia = formData.financas;
+        const outros = formData.outros1 + formData.outros2 + formData.outros3 + formData.outros4 + formData.outros5;
+
+        // // Calcular totais e identificar 3 principais despesas
+        // const totalReceita = formData.rendaMensal;
+        // const despesasArray = [
+        //     { nome: 'Compras', valor: formData.compras },
+        //     { nome: 'Água', valor: formData.agua },
+        //     { nome: 'Luz', valor: formData.luz },
+        //     { nome: 'Internet', valor: formData.internet },
+        //     { nome: 'Exames', valor: formData.exames },
+        //     { nome: 'Medicamentos', valor: formData.medicamentos },
+        //     { nome: 'Lazer', valor: formData.lazer },
+        //     { nome: 'Transporte', valor: formData.transporte }
+        // ];
 
         // Ordenar despesas do maior para o menor
-        const despesasOrdenadas = despesasArray.sort((a, b) => b.valor - a.valor);
-        const tresMaioresDespesas = despesasOrdenadas.slice(0, 3);
+        // const despesasOrdenadas = despesasArray.sort((a, b) => b.valor - a.valor);
+        // const tresMaioresDespesas = despesasOrdenadas.slice(0, 3);
 
         // Criar área para gráficos no final da página
         const graficosDiv = document.createElement('div');
         graficosDiv.id = 'graficos-financeiros';
         
         graficosDiv.innerHTML = `
-            <h1 class="text-4xl font-bold mb-10">Relatório Financeiro</h1>
             <canvas id="grafico-receitas" class="w-[400px] h-[200px] max-sm:w-[350px] max-sm:h-[150px]"></canvas>
-            <canvas id="grafico-despesas" class="w-[400px] h-[200px] max-sm:w-[350px] max-sm:h-[150px]"></canvas>
+            <br>
+            <br>
+            <canvas id="grafico-despesas" class="w-[400px] h-[300px] max-sm:w-[350px] max-sm:h-[150px]"></canvas>
         `;
         graficos.appendChild(graficosDiv);
         boxGrafico.classList.add('flex');
         boxGrafico.classList.remove('hidden');
         form.classList.add('hidden');
 
-        // Renderizar gráfico de pizza
+        // Gráfico de pizza
         const ctx1 = document.getElementById('grafico-receitas').getContext('2d');
         new Chart(ctx1, {
             type: 'pie',
             data: {
-                labels: [...tresMaioresDespesas.map(d => d.nome)],
+                labels: [`Residencial - R$${despesasResidenciais}`, `Saúde - R$${despesasSaude}`, `Lazer - R$${lazer}`, `Transporte - R$${transporte}`, `Economia - R$${economia}`, `Outros - R$${outros}`],
                 datasets: [{
-                    data: [...tresMaioresDespesas.map(d => d.valor)],
-                    backgroundColor: [
-                        ...chartColors.despesas.slice(0, tresMaioresDespesas.length),
-                        chartColors.receitas
-                    ]
+                    data: [despesasResidenciais, despesasSaude, lazer, transporte, economia, outros]
                 }]
             },
             options: {
@@ -102,26 +100,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Receitas Totais e 3 Maiores Despesas'
+                        text: 'Visão Geral'
                     }
                 }
             }
         });
 
-        // Renderizar gráfico de barras
-        const ctx2 = document.getElementById('grafico-despesas').getContext('2d');
+        // Gráfico de barras
+        const canvas = document.getElementById('grafico-despesas');
+        canvas.width = 500;
+        canvas.height = 300;
+
+        const ctx2 = canvas.getContext('2d');
         new Chart(ctx2, {
             type: 'bar',
             data: {
-                labels: [...despesasArray.map(d => d.nome), 'Receita Principal', 'Outras Fontes'],
+                labels: ['Gráfico Detalhado'],
                 datasets: [{
-                    label: 'Despesas e Receitas',
-                    data: [...despesasArray.map(d => d.valor), formData.rendaMensal, formData.outrasfontes],
-                    backgroundColor: [...chartColors.despesas, chartColors.receitas, chartColors.outrasfontes]
+                    label: 'Renda Mensal',
+                    data: [formData.rendaMensal],
                 }]
             },
             options: {
-                responsive: true,
+                responsive: false,
+                maintainAspectRatio: false,
                 plugins: {
                     title: {
                         display: true,
@@ -130,59 +132,76 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
-
-        // // Aguardar renderização dos gráficos
-        // await new Promise(resolve => setTimeout(resolve, 500));
     });
 });
 
+// Função para converter imagem em base64
+function getImageAsBase64(imageUrl) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.crossOrigin = 'Anonymous';
+        
+        img.onload = () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0);
+            
+            const base64 = canvas.toDataURL('image/jpeg');
+            resolve(base64);
+        };
+        
+        img.onerror = () => {
+            reject(new Error('Erro ao carregar a imagem'));
+        };
+        
+        img.src = imageUrl;
+    });
+}
+
+// Função para gerar o PDF
 async function gerarPDF() {
     try {
-        // Selecionar o corpo do documento
-        const body = document.body;
- 
-        // Configurar o html2canvas para capturar todo o conteúdo
-        const canvas = await html2canvas(body, {
-            scale: 2, // Aumenta a qualidade da captura
-            useCORS: true, // Permite carregar imagens externas
-            scrollX: 0, // Evita problemas de deslocamento horizontal
-            scrollY: 0, // Evita problemas de deslocamento vertical
-            windowWidth: document.documentElement.scrollWidth, // Largura total do documento
-            windowHeight: document.documentElement.scrollHeight // Altura total do documento
+        // Carrega a imagem de fundo
+        const backgroundImage = await getImageAsBase64('../imgs/pdf-padrao.png');
+
+        // Captura apenas os gráficos
+        const graficosElement = document.getElementById('graficos-financeiros');
+        const graficosCanvas = await html2canvas(graficosElement, {
+            scale: 2,
+            useCORS: true,
+            logging: false,
+            backgroundColor: 'transparent'
         });
 
-        // Converter o canvas para imagem
-        const imgData = canvas.toDataURL('image/png', 1.0);
-
-        // Criar o PDF
         const { jsPDF } = window.jspdf;
         const pdf = new jsPDF({
-            orientation: 'p',
+            orientation: 'portrait',
             unit: 'mm',
             format: 'a4'
         });
 
-        // Dimensões do PDF
         const pageWidth = pdf.internal.pageSize.getWidth();
         const pageHeight = pdf.internal.pageSize.getHeight();
 
-        // Dimensões da imagem
-        const imgWidth = pageWidth;
-        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        // Adiciona a imagem de fundo preenchendo toda a página
+        pdf.addImage(backgroundImage, 'JPEG', 0, 0, pageWidth, pageHeight);
 
-        // Adicionar a imagem ao PDF
-        let position = 0;
+        // Calcula as dimensões para os gráficos
+        const graficosAspectRatio = graficosCanvas.width / graficosCanvas.height;
+        const graficosWidth = pageWidth * 0.6;
+        const graficosHeight = graficosWidth / graficosAspectRatio;
 
-        while (position < imgHeight) {
-            pdf.addImage(imgData, 'PNG', 0, -position, imgWidth, imgHeight);
-            position += pageHeight;
+        // Centraliza os gráficos
+        const xOffset = (pageWidth - graficosWidth) / 2;
+        const yOffset = pageHeight * 0.15;
 
-            if (position < imgHeight) {
-                pdf.addPage();
-            }
-        }
+        // Adiciona os gráficos como uma camada superior
+        const graficosData = graficosCanvas.toDataURL('image/png', 1.0);
+        pdf.addImage(graficosData, 'PNG', xOffset, yOffset, graficosWidth, graficosHeight);
 
-        // Salvar o PDF
         pdf.save('Relatorio_Financeiro_Completo.pdf');
     } catch (error) {
         console.error('Erro ao gerar o PDF:', error);
@@ -190,10 +209,11 @@ async function gerarPDF() {
     }
 }
 
-function voltarFormulario(){
+// Função para voltar ao formulário
+function voltarFormulario() {
     const form = document.getElementById('formulario');
-    const boxGrafico = document.getElementById('box-grafico')
+    const boxGrafico = document.getElementById('box-grafico');
 
     boxGrafico.classList.add('hidden');
-    form.classList.remove('hidden')
+    form.classList.remove('hidden');
 }
