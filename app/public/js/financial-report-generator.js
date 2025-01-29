@@ -77,10 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
         graficosDiv.id = 'graficos-financeiros';
         
         graficosDiv.innerHTML = `
-            <canvas id="grafico-receitas" class="w-[400px] h-[200px] max-sm:w-[350px] max-sm:h-[150px]"></canvas>
+            <canvas id="grafico-receitas" class="w-[500px] h-[300px] max-sm:w-[350px] max-sm:h-[150px]"></canvas>
             <br>
             <br>
-            <canvas id="grafico-despesas" class="w-[400px] h-[300px] max-sm:w-[350px] max-sm:h-[150px]"></canvas>
+            <canvas id="grafico-despesas" class="w-[500px] h-[300px] max-sm:w-[350px] max-sm:h-[150px]"></canvas>
         `;
         graficos.appendChild(graficosDiv);
         boxGrafico.classList.add('flex');
@@ -136,8 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Gráfico de barras
         const canvas = document.getElementById('grafico-despesas');
-        canvas.width = 500;
-        canvas.height = 300;
+        // canvas.width = 500;
+        // canvas.height = 300;
 
         const ctx2 = canvas.getContext('2d');
         new Chart(ctx2, {
