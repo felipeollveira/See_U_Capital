@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const economia = formData.financas;
         const outros = formData.outros1 + formData.outros2 + formData.outros3 + formData.outros4 + formData.outros5;
 
+        
+
         // // Calcular totais e identificar 3 principais despesas
         // const totalReceita = formData.rendaMensal;
         // const despesasArray = [
@@ -90,7 +92,14 @@ document.addEventListener('DOMContentLoaded', () => {
         new Chart(ctx1, {
             type: 'pie',
             data: {
-                labels: [`Residencial - R$${despesasResidenciais}`, `Saúde - R$${despesasSaude}`, `Lazer - R$${lazer}`, `Transporte - R$${transporte}`, `Economia - R$${economia}`, `Outros - R$${outros}`],
+                labels: [
+                    `Residencial - R$${despesasResidenciais}`, 
+                    `Saúde - R$${despesasSaude}`, 
+                    `Lazer - R$${lazer}`, 
+                    `Transporte - R$${transporte}`, 
+                    `Economia - R$${economia}`, 
+                    `Outros - R$${outros}`
+                ],
                 datasets: [{
                     data: [despesasResidenciais, despesasSaude, lazer, transporte, economia, outros]
                 }]
@@ -100,11 +109,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Visão Geral'
+                        text: 'Visão Geral',
+                        color: '#ffffff', // Cor do título
+                        font: {
+                            size: 25, 
+                            weight: 'bold' ,
+                            family: 'Montserrat, Arial, Helvetica, sans-serif'
+                        }
+                    },
+                    legend: {
+                        position:'top',
+                        align: 'center',
+                        labels: {
+                            color: '#ffffff', // Cor dos labels fica aq
+                            font: {
+                                weight: '400' ,
+                                size: 14,
+                                family: 'Montserrat, Arial, Helvetica, sans-serif'
+                            }
+                        }
                     }
                 }
             }
         });
+        
 
         // Gráfico de barras
         const canvas = document.getElementById('grafico-despesas');
