@@ -6,16 +6,13 @@ Possue o objetivo de promover a conscientização e o controle financeiro por me
 
 <!--- # "Verify icons availability here https://github.com/tandpfun/skill-icons" -->
 
-[![My Skills](https://skillicons.dev/icons?i=tailwind)](https://tailwindcss.com) [![My Skills](https://skillicons.dev/icons?i=nodejs)](https://nodejs.org) [![My Skills](https://skillicons.dev/icons?i=expressjs)](https://expressjs.com) [![My Skills](https://skillicons.dev/icons?i=javascript)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Introduction) [![My Skills](https://skillicons.dev/icons?i=html)](https://developer.mozilla.org/pt-BR/docs/Web/HTML) [![My Skills](https://skillicons.dev/icons?i=css)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+[![My Skills](https://skillicons.dev/icons?i=tailwind)](https://tailwindcss.com) [![My Skills](https://skillicons.dev/icons?i=nodejs)](https://nodejs.org) [![My Skills](https://skillicons.dev/icons?i=javascript)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Introduction) [![My Skills](https://skillicons.dev/icons?i=html)](https://developer.mozilla.org/pt-BR/docs/Web/HTML) [![My Skills](https://skillicons.dev/icons?i=css)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
 ### Back-end
 
 1. **NodeJS**: compilador JavaScript, melhor para exportação de bibliotecas
 
-2. **Express**: Para criação de rotas
-3. **ExcelJS**: Para exportar Excel
-4. **Pdf-creator-node**: Para exportar PDF
-5. **ChartJS**: Criação de gráfico
+2. **ChartJS**: Criação de gráfico
 
 ### Front-end
 
