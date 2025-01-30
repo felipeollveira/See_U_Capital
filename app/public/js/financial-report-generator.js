@@ -6,20 +6,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const boxGrafico = document.getElementById('box-grafico')
     const graficos = document.getElementById('graficos')
 
+    //Versão Antiga
     // Cores expandidas para cada categoria
+    // const chartColors = {
+    //     receitas: 'rgb(54, 162, 235)', // Azul
+    //     agua: 'rgb(0, 128, 255)',      // Azul claro
+    //     luz: 'rgb(255, 193, 7)',       // Amarelo
+    //     internet: 'rgb(156, 39, 176)', // Roxo
+    //     gas: 'rgb(255, 87, 34)',       // Laranja
+    //     compras: 'rgb(76, 175, 80)',   // Verde
+    //     exames: 'rgb(233, 30, 99)',    // Rosa
+    //     medicamentos: 'rgb(0, 150, 136)', // Verde-água
+    //     lazer: 'rgb(121, 85, 72)',     // Marrom
+    //     transporte: 'rgb(63, 81, 181)', // Azul escuro
+    //     financas: 'rgb(75, 192, 192)',  // Verde-água claro
+    //     outros: 'rgb(158, 158, 158)'    // Cinza
+    // };
+
     const chartColors = {
-        receitas: 'rgb(54, 162, 235)', // Azul
-        agua: 'rgb(0, 128, 255)',      // Azul claro
-        luz: 'rgb(255, 193, 7)',       // Amarelo
-        internet: 'rgb(156, 39, 176)', // Roxo
-        gas: 'rgb(255, 87, 34)',       // Laranja
-        compras: 'rgb(76, 175, 80)',   // Verde
-        exames: 'rgb(233, 30, 99)',    // Rosa
-        medicamentos: 'rgb(0, 150, 136)', // Verde-água
-        lazer: 'rgb(121, 85, 72)',     // Marrom
-        transporte: 'rgb(63, 81, 181)', // Azul escuro
-        financas: 'rgb(75, 192, 192)',  // Verde-água claro
-        outros: 'rgb(158, 158, 158)'    // Cinza
+        receitas: 'rgb(78, 155, 127)',
+        agua: 'rgb(150, 7, 2)',      
+        luz: 'rgb(109, 109, 187)',       
+        internet: 'rgb(55, 73, 87)', 
+        gas: 'rgb(251, 188, 76)',      
+        compras: 'rgb(255, 0, 136)',   
+        exames: 'rgb(255, 101, 35)',   
+        medicamentos: 'rgb(0, 94, 255)', 
+        lazer: 'rgb(6, 246, 22)',     
+        transporte: 'rgb(215, 6, 234)', 
+        financas: 'rgb(255, 0, 136)', 
+        outros: 'rgb(150, 7, 2)'   
     };
 
     btnGrafico.addEventListener('click', async (e) => {
@@ -112,8 +128,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     `Outros - R$${outros}`
                 ],
                 datasets: [{
-                    data: [despesasResidenciais, despesasSaude, lazer, transporte, economia, outros]
-                }]
+                    data: [despesasResidenciais, despesasSaude, lazer, transporte, economia, outros], //Datasets sem cores
+                    backgroundColor: [
+                        chartColors.agua,
+                        chartColors.luz, 
+                        chartColors.internet,
+                        chartColors.gas, 
+                        chartColors.compras, 
+                        chartColors.exames  
+                    ]
+                }],
+                
+
+                
             },
             options: {
                 responsive: true,
@@ -135,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             color: '#ffffff', // Cor dos labels fica aq
                             font: {
                                 weight: '400' ,
-                                size: 14,
+                                size: 16,
                                 family: 'Montserrat, Arial, Helvetica, sans-serif'
                             }
                         }
@@ -224,7 +251,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Detalhamento de Despesas e Receitas'
+                        text: 'Detalhamento de Despesas e Receitas',
+                        color: '#ffffff', // Cor do título
+                        font: {
+                            size: 25, 
+                            weight: 'bold' ,
+                            family: 'Montserrat, Arial, Helvetica, sans-serif'
+                        }
                     },
                     legend: {
                         display: true,
@@ -233,8 +266,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         labels: {
                             boxWidth: 12,
                             padding:10,
+                            color:'#ffffff',
                             font: {
-                                size: window.innerWidth < 768 ? 9 : 14 // Ajusta dinamicamente
+                                size: window.innerWidth < 768 ? 9 : 14, // Ajusta dinamicamente
+                                weight: '400' ,
+                                size: 15,
+                                family: 'Montserrat, Arial, Helvetica, sans-serif'
+                                
                             }
                         }
                     }

@@ -192,3 +192,7 @@ input[type="number"]::-webkit-outer-spin-button {
     border: 1px solid rgba(0, 0, 0, 0.00);
     background: linear-gradient(144deg, rgba(78, 155, 127, 0.18) 0%, rgba(21, 38, 64, 0.18) 100%);
 }
+
+#grafico-receitas{
+    margin-bottom: 30px;
+}
