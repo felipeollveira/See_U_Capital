@@ -1630,6 +1630,10 @@ html {
   margin-top: 1.25rem;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -1644,6 +1648,14 @@ html {
 
 .h-5 {
   height: 1.25rem;
+}
+
+.h-\[1000px\] {
+  height: 1000px;
+}
+
+.h-\[300px\] {
+  height: 300px;
 }
 
 .h-\[44px\] {
@@ -1704,6 +1716,10 @@ html {
 
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-end {
@@ -1767,10 +1783,6 @@ html {
   padding: 1rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-7 {
   padding: 1.75rem;
 }
@@ -1803,10 +1815,6 @@ html {
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-}
-
-.pt-5 {
-  padding-top: 1.25rem;
 }
 
 .text-center {
@@ -2100,7 +2108,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* --SUGESTÕES-- */
 
-.box_sugestao{
+.box_sugestao, .box-financeiro{
   border-radius: 46.324px;
   border: 1.077px solid rgba(255, 255, 255, 0.00);
   background: rgba(55, 73, 87, 0.12);
@@ -2251,6 +2259,14 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media not all and (min-width: 640px) {
+  .max-sm\:h-\[200px\] {
+    height: 200px;
+  }
+
+  .max-sm\:h-\[250px\] {
+    height: 250px;
+  }
+
   .max-sm\:h-full {
     height: 100%;
   }
@@ -2259,8 +2275,17 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100%;
   }
 
+  .max-sm\:w-\[300px\] {
+    width: 300px;
+  }
+
   .max-sm\:w-full {
     width: 100%;
+  }
+
+  .max-sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .max-sm\:text-2xl {
@@ -2271,12 +2296,6 @@ input[type="number"]::-webkit-outer-spin-button {
   .max-sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-}
-
-@media (max-width: 450px) {
-  .max-\[450px\]\:w-full {
-    width: 100%;
   }
 }
 

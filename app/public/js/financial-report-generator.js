@@ -105,9 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
         graficosDiv.id = 'graficos-financeiros';
         
         graficosDiv.innerHTML = `
-            <canvas id="grafico-receitas" class="p-5 w-[400px] h-full max-[450px]:w-full"></canvas>
+            <canvas id="grafico-receitas" class="m-auto w-[400px] h-[300px] max-sm:w-[300px] max-sm:h-[200px]"></canvas>
             <br>
-            <canvas id="grafico-despesas" class="w-[400px] h-full max-[450px]:w-full"></canvas>
+            <br>
+            <canvas id="grafico-despesas" class="m-auto w-[400px] h-[300px] max-sm:w-[300px] max-sm:h-[250px]"></canvas>
         `;
         graficos.appendChild(graficosDiv);
         boxGrafico.classList.add('flex');
@@ -143,26 +144,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 
             },
             options: {
-                responsive: true,
+                responsive: false,
                 plugins: {
                     title: {
                         display: true,
                         text: 'Visão Geral',
                         color: '#ffffff', // Cor do título
                         font: {
-                            size: 25, 
+                            size: window.innerWidth < 640 ? 15 : 23, 
                             weight: 'bold' ,
                             family: 'Montserrat, Arial, Helvetica, sans-serif'
                         }
                     },
                     legend: {
-                        position:'top',
+                        position:'bottom',
                         align: 'center',
                         labels: {
                             color: '#ffffff', // Cor dos labels fica aq
                             font: {
                                 weight: '400' ,
-                                size: 16,
+                                size: window.innerWidth < 640 ? 9 : 14,
                                 family: 'Montserrat, Arial, Helvetica, sans-serif'
                             }
                         }
@@ -251,26 +252,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Detalhamento de Despesas e Receitas',
+                        text: 'Despesas e Receitas',
                         color: '#ffffff', // Cor do título
                         font: {
-                            size: 25, 
+                            size: window.innerWidth < 640 ? 15 : 23,
                             weight: 'bold' ,
                             family: 'Montserrat, Arial, Helvetica, sans-serif'
                         }
                     },
                     legend: {
                         display: true,
-                        position: 'top',
+                        position: 'bottom',
                         align: 'center',
                         labels: {
                             boxWidth: 12,
                             padding:10,
                             color:'#ffffff',
                             font: {
-                                size: window.innerWidth < 768 ? 9 : 14, // Ajusta dinamicamente
+                                size: window.innerWidth < 640 ? 9 : 14, // Ajusta dinamicamente
                                 weight: '400' ,
-                                size: 15,
                                 family: 'Montserrat, Arial, Helvetica, sans-serif'
                                 
                             }
