@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/output.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/animations.css">
+<<<<<<< HEAD
 </head>
 <body id="capital">
   <nav class="mt-7 w-full">
@@ -33,6 +34,76 @@
         <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Ganhos,</b></h1>
         
         <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Qual o valor total da sua renda mensal?</h2>
+=======
+    <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body id="capital">
+  <nav class="flex items-center justify-between px-20 p-10 w-full max-lg:px-5">
+    <a class="btn btn-ghost" href="../index.html">
+      <img src="../imgs/logo.png" width="110" alt="logo">
+    </a>
+
+    <div class="flex gap-16 max-lg:hidden">
+      <a href="../index.html">Inicio</a>
+      <a href="./sobre.html">Sobre nós</a>
+      <a href="./sugestoes.html">Sugestões</a>
+    </div>
+
+    <div class="flex justify-end drawer drawer-end z-10 lg:hidden">
+      <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content">
+        <!-- Page content here -->
+        <label for="my-drawer-4" class="drawer-button btn btn-ghost">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="inline-block h-5 w-5 stroke-current">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+          </svg>
+        </label>
+      </div>
+      <div class="drawer-side">
+        <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+        <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 bg-green">
+          <!-- Sidebar content here -->
+          <li class="text-white"><a href="../index.html">Inicio</a></li>
+          <li class="text-white"><a href="./sobre.html">Sobre nós</a></li>
+          <li class="text-white"><a href="./sugestoes.html">Sugestões</a></li>
+          <br>
+
+          <a href="./capital.html" class="btn btn-comecar absolute mx-auto bottom-5 right-0 left-0">COMECE AGORA</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <main>
+    <div id="termo" class="flex flex-col py-10 w-[72%] max-lg:w-full">
+      <h1 class="text-center text-4xl font-bold mb-10 max-2xl:text-3xl max-lg:text-lg">Termos & Condições</h1>
+
+      <p class="text-2xl font-light text-justify leading-[177%] max-2xl:text-xl max-2xl:leading-[177%] max-lg:text-base">
+        Em nosso site, sua <b class="font-bold">privacidade</b> e <b class="font-bold">segurança</b> são nossas maiores prioridades. Garantimos que <b class="font-bold">não armazenamos</b>, <b class="font-bold">não registramos</b> e não compartilhamos nenhum dado pessoal ou financeiro inserido por você. <b class="font-bold">Todas as informações fornecidas dura  nte o uso do nosso site são processadas exclusivamente para gerar os cálculos solicitados e, após a finalização do processo, são descartadas imediatamente.</b>
+        <br>
+        Não há nenhum armazenamento de dados a longo prazo, o que significa que <b class="font-bold">nenhuma informação será retida ou utilizada para outros fins.</b> Você pode usar nosso serviço com total confiança, sabendo que seus dados permanecem privados e seguros. Nossa missão é fornecer uma ferramenta útil e eficiente, sem comprometer sua privacidade ou segurança em momento algum.
+      </p>
+       
+      <button id="btnComecar" class="btn btn-comecar mt-10 mx-auto">VAMOS COMEÇAR?</button>
+    </div>
+
+    <form id="formulario" class="form hidden flex-col mt-16 px-10 w-[80%] max-lg:w-full max-lg:px-4">
+      <div id="ref-ganhos" class="flex flex-col gap-7 ">
+        <h1 class="text-4xl text-center mt-20 mb-10 max-2xl:text-3xl max-lg:text-xl">Referente a <b class="font-bold">Ganhos</b></h1>
+        
+        <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Qual o valor total da sua <b class="font-bold">renda mensal?</b></h2>
+>>>>>>> front_end
 
         <input
           id="renda-mensal"
@@ -45,6 +116,7 @@
           placeholder="EX: 1500, 3000, 4000 (R$)" 
           required
         >
+<<<<<<< HEAD
       
         <h2 class="text-5xl text-start font-light mt-12 max-2xl:text-2xl max-lg:text-lg">Quanto você recebe, em média, de outras fontes além do salário principal?</h2>
 
@@ -65,6 +137,14 @@
         <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Despesas Residenciais,</b></h1>
         
         <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Quanto você gasta, em média, com a conta de água?</h2>
+=======
+      </div>
+
+      <div id="ref-despesas-residenciais" class="flex flex-col gap-7">
+        <h1 class="text-4xl text-center mt-32 mb-10 max-2xl:text-3xl max-lg:text-xl">Referente a <b class="font-semibold">Despesas Residenciais</b></h1>
+        
+        <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Quanto você gasta, em média, com a <b class="font-bold">conta de água</b>?</h2>
+>>>>>>> front_end
 
         <input
           id="agua"
@@ -75,10 +155,18 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
+<<<<<<< HEAD
           required
         >
       
         <h2 class="text-5xl text-start font-light mt-12 max-2xl:text-2xl max-lg:text-lg">E com a conta de luz, qual é o valor aproximado?</h2>
+=======
+        >
+        
+        <br>
+
+        <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">E com a <b class="font-bold">conta de luz</b>, qual é o valor aproximado?</h2>
+>>>>>>> front_end
 
         <input
           id="luz"
@@ -89,6 +177,7 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
+<<<<<<< HEAD
           required
         >
       </div>
@@ -97,6 +186,13 @@
         <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Despesas Residenciais,</b></h1>
         
         <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Qual o custo mensal do seu plano de Internet?</h2>
+=======
+        >
+
+        <br>
+        
+        <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Qual o custo mensal do seu <b class="font-bold">plano de Internet</b>?</h2>
+>>>>>>> front_end
 
         <input
           id="internet"
@@ -107,10 +203,33 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
+<<<<<<< HEAD
           required
         >
       
         <h2 class="text-5xl text-start font-light mt-12 max-2xl:text-2xl max-lg:text-lg">Qual é o valor médio das compras do mês?</h2>
+=======
+        >
+
+        <br>
+
+        <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Quanto você gasta por mês com <b class="font-bold">gás de cozinha</b>?</h2>
+
+        <input
+          id="gas"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="gas"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+        >
+
+        <br>
+      
+        <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Qual é o valor médio das <b class="font-bold">compras do mês</b>?</h2>
+>>>>>>> front_end
 
         <input
           id="compras"
@@ -121,6 +240,7 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
+<<<<<<< HEAD
           required
         >
       </div>
@@ -135,14 +255,37 @@
           class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
           inputmode="numeric"
           name="exames"
+=======
+        >
+      </div>
+
+      <div id="ref-saude" class="flex flex-col gap-7">
+        <h1 class="text-4xl text-center mt-32 mb-10 max-2xl:text-3xl max-lg:text-xl">Referente a <b class="font-bold">Saúde</b></h1>
+        
+        <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Qual o valor médio gasto com <b class="font-bold">consultas e exames médicos</b>?</h2>
+
+        <input
+          id="consultas-exames"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="consultas-exames"
+>>>>>>> front_end
           type="number" 
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
+<<<<<<< HEAD
           required
         >
       
         <h2 class="text-5xl text-start font-light mt-12 max-2xl:text-2xl max-lg:text-lg">Quanto você investe mensalmente em medicamentos?</h2>
+=======
+        >
+        
+        <br>
+
+        <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Quanto você investe mensalmente em <b class="font-bold">medicamentos</b>?</h2>
+>>>>>>> front_end
 
         <input
           id="medicamentos"
@@ -153,6 +296,7 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
+<<<<<<< HEAD
           required
         >
       </div>
@@ -167,10 +311,26 @@
           class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
           inputmode="numeric"
           name="lazer"
+=======
+        >
+      </div>
+
+      <div id="ref-lazer" class="flex flex-col gap-7">
+        <h1 class="text-4xl text-center mt-32 mb-10 max-2xl:text-3xl max-lg:text-xl">Referente a <b class="font-bold">Lazer</b></h1>
+        
+        <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Quanto você gasta, em média, com <b class="font-bold">viagens e passeios</b>?</h2>
+
+        <input
+          id="viagens-passeios"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="viagens-passeios"
+>>>>>>> front_end
           type="number" 
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
+<<<<<<< HEAD
           required
         >
       </div>
@@ -179,6 +339,15 @@
         <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Transporte,</b></h1>
         
         <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Qual é o custo mensal com transporte (combustível, transporte público, etc.)?</h2>
+=======
+        >
+      </div>
+
+      <div id="ref-transporte" class="flex flex-col gap-7">
+        <h1 class="text-4xl text-center mt-32 mb-10 max-2xl:text-3xl max-lg:text-xl">Referente a <b class="font-bold">Transporte</b></h1>
+        
+        <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Qual é o custo mensal com <b class="font-bold">transporte</b> (combustível, transporte público, etc.)?</h2>
+>>>>>>> front_end
 
         <input
           id="transporte"
@@ -189,6 +358,7 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
+<<<<<<< HEAD
           required
         >
       </div>
@@ -197,6 +367,15 @@
         <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Finanças,</b></h1>
         
         <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Quanto você consegue economizar ou guardar por mês?</h2>
+=======
+        >
+      </div>
+
+      <div id="ref-financas" class="flex flex-col gap-7">
+        <h1 class="text-4xl text-center mt-32 mb-10 max-2xl:text-3xl max-lg:text-xl">Referente a <b class="font-bold">Finanças</b></h1>
+        
+        <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Quanto você consegue <b class="font-bold">economizar ou guardar</b> por mês?</h2>
+>>>>>>> front_end
 
         <input
           id="financas"
@@ -207,6 +386,7 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
+<<<<<<< HEAD
           required
         >
       </div>
@@ -227,5 +407,98 @@
   </footer>
   <script src="../js/form.js"></script>
   <script src="../js/script.js"></script>
+=======
+        >
+      </div>
+
+      <div id="ref-outros" class="flex flex-col gap-7">
+        <h1 class="text-4xl text-center mt-32 mb-10 font-bold max-2xl:text-3xl max-lg:text-xl">Outros</h1>
+
+        <input
+          id="outros1"
+          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="outros1"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+        >
+        
+        <input
+          id="outros2"
+          class="hidden input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="outros2"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+        >
+
+        <input
+          id="outros3"
+          class="hidden input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="outros3"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+        >
+
+        <input
+          id="outros4"
+          class="hidden input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="outros4"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+        >
+
+        <input
+          id="outros5"
+          class="hidden input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
+          inputmode="numeric"
+          name="outros5"
+          type="number" 
+          maxlength="10" 
+          oninput="this.value = this.value.slice(0, 10)"
+          placeholder="EX: 1500, 3000, 4000 (R$)" 
+        >
+        <div class="flex gap-3">
+          <button type="button" id="btn_mais" class="btn w-5" onclick="addInput()">+</button>
+          <button type="button" id="btn_menos" class="btn w-5 hidden" onclick="removeInput()">-</button>
+        </div>
+ 
+
+      </div>
+
+      <div class="flex m-auto my-24 gap-4 max-2xl:my-16 max-2xl:mb-8">
+        <button id="gerar-grafico" class="btn btn-grafico shadowTitulo mx-auto" type="submit">GERAR GRÁFICO</button>
+      </div>
+    </form>
+
+    <div id="box-grafico" class="hidden box-financeiro flex-col py-10 h-[1000px] justify-start items-center w-full max-sm:px-0">
+      <h1 class=" text-4xl m-auto font-bold max-lg:text-2xl max-sm:text-xl">Relatório Financeiro</h1>
+
+      <div id="graficos" class="flex flex-col justify-center items-center h-full"></div>
+
+      <div class="flex gap-5 mt-auto">
+        <button class="btn btn-voltar" onclick="voltarFormulario()">Voltar</button>
+        <button class="btn btn-pdf" onclick="gerarPDF()">Salvar PDF</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class= "py-10 text-center">
+    <p class="text-sm font-light tracking-[4.6px] max-2xl:text-xs max-lg:tracking-widest">TODOS OS DIREITOS RESERVADOS</p>
+  </footer>
+  <script src="../js/form.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/financial-report-generator.js"></script>
+>>>>>>> front_end
 </body>
 </html>

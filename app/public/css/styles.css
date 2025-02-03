@@ -21,7 +21,25 @@ body{
     align-items: center;
     color: white;
     font-family: Montserrat, Arial, Helvetica, sans-serif;
+<<<<<<< HEAD
     background: url(../imgs/noise.png) no-repeat center, url(../imgs/bg.png) no-repeat center; 
+=======
+    
+}
+
+body#home{
+    background: url(../imgs/noise.png) center no-repeat, url(../imgs/bg_home.png) center no-repeat;
+    background-size: cover;
+}
+
+body#capital{
+    background: url(../imgs/noise.png) center no-repeat, url(../imgs/bg_capital.png) center no-repeat;
+    background-size: cover;
+}
+
+body#sobre, body#dicas{
+    background: url(../imgs/noise.png) center no-repeat, url(../imgs/bg_sobre-dicas.png) center no-repeat;
+>>>>>>> front_end
     background-size: cover;
 }
 
@@ -49,8 +67,19 @@ font-style: normal;
 line-height: 150%; /* 45px */
 }
 
+<<<<<<< HEAD
 #home .button-div .btn-comecar,
 #capital .btn-comecar{
+=======
+hr{
+    stroke-width: 1px;
+    stroke: #2BD999;
+    background-color: #2BD999;
+    color: #2BD999;
+}
+
+.btn-comecar, .btn-grafico{
+>>>>>>> front_end
     width: 249px;
     border-radius: 25px;
     flex-shrink: 0;
@@ -61,12 +90,20 @@ line-height: 150%; /* 45px */
     box-shadow: 0px 0px 38.4px 0px rgba(13, 243, 159, 0.48);
 }
 
+<<<<<<< HEAD
+=======
+.btn-comecar:hover, .btn-grafico:hover{
+    background-color: #4e9b7f9c;
+}
+
+>>>>>>> front_end
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0;
 }
 
+<<<<<<< HEAD
 /* INDEX (HOME) */
 #home .titulo{
     display: inline-flex;
@@ -86,6 +123,17 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-shrink: 0;
 }
 
+=======
+.bg-green{
+    background-color: #316350;
+}
+
+.font-montserrat{
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+/* INDEX (HOME) */
+>>>>>>> front_end
 #home .texto p{
     color: #FFF;
     text-align: center;
@@ -117,11 +165,24 @@ input[type="number"]::-webkit-outer-spin-button {
     font-weight: 300;
 }
 
+<<<<<<< HEAD
 /* CAPITAL RENDA */
+=======
+/* CAPITAL FORM */
+.form{
+    border-radius: 10px;
+    border: 2px solid #374957;
+    background: linear-gradient(245deg, rgba(6, 10, 19, 0.10) 17.16%, rgba(6, 10, 20, 0.10) 18.54%, rgba(61, 64, 70, 0.10) 51.65%);
+    backdrop-filter: blur(20.950000762939453px);
+    z-index: 0;
+}
+
+>>>>>>> front_end
 .input-numeric{
     border-radius: 38px;
     border: 1px solid #4E9B6E;
     background: rgba(217, 217, 217, 0.00);
+<<<<<<< HEAD
     
 }
 
@@ -137,4 +198,53 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 39.837px;
     border: 0.669px solid #2BD999;
     background: #4E9B7F;
+=======
+}
+
+/* CAPITAL GRAFICO */
+.btn-voltar{
+    color: white;
+    background-color: transparent;
+    border-radius: 39.837px;
+    border: 0.669px solid #2BD999;
+}
+.btn-voltar:hover{
+    border: 0.669px solid #2BD999;
+    background-color: #2bd99917;
+}
+
+.btn-pdf{
+    color: white;
+    border-radius: 39.837px;
+    box-shadow: 0px 0px 21.795px 0px rgba(13, 243, 159, 0.48);
+    border: 0.669px solid #2BD999;
+    background: #4E9B7F;
+}
+.btn-pdf:hover{
+    border: 0.669px solid #4e9b7f9c;
+    background: #4aac889c;
+}
+
+/* --SUGESTÕES-- */
+.box_sugestao, .box-financeiro{
+    border-radius: 46.324px;
+    border: 1.077px solid rgba(255, 255, 255, 0.00);
+    background: rgba(55, 73, 87, 0.12);
+    backdrop-filter: blur(16.429000854492188px);
+}
+@media not all and (min-width: 640px) {
+    .sm {
+        border-radius: 0px;
+        border: 0px;
+        background: transparent;
+        width: 100%;
+        padding: 0px;
+    }
+}
+
+.passo{
+    border-radius: 26.469px;
+    border: 1px solid rgba(0, 0, 0, 0.00);
+    background: linear-gradient(144deg, rgba(78, 155, 127, 0.18) 0%, rgba(21, 38, 64, 0.18) 100%);
+>>>>>>> front_end
 }

@@ -1,5 +1,6 @@
 /* TERMO */
 @keyframes hiddenExit {
+<<<<<<< HEAD
 	0% {
 		position:fixed;
 		opacity: 1;
@@ -12,6 +13,24 @@
         display: none;
 		transform: scale(0.6);
 	}
+=======
+    0% {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.6);
+        opacity: 0;
+        visibility: hidden;
+    }
+>>>>>>> front_end
 }
 
 .hiddenBox{
@@ -20,7 +39,11 @@
 }
 
 /* FORMULARIO */
+<<<<<<< HEAD
 @keyframes FadeInRight {
+=======
+@keyframes fadeInBottom {
+>>>>>>> front_end
 	0% {
 		opacity: 0;
 		transform: translateY(50px);
@@ -32,6 +55,7 @@
 	}
 }
 
+<<<<<<< HEAD
 .rendaAnimation{
     animation: FadeInRight 1s ease 0s 1 normal forwards;
 }
@@ -55,6 +79,14 @@
 
 /* PERGUNTAS (PRÓXIMO) */
 @keyframes fadeRight {
+=======
+.formAnimation{
+    animation: fadeInBottom 2s ease 0s 1 normal forwards;
+}
+
+/* ADICIONAR INPUT */
+@keyframes fadeInRight {
+>>>>>>> front_end
 	0% {
 		opacity: 0;
 		transform: translateX(50px);
@@ -66,6 +98,28 @@
 	}
 }
 
+<<<<<<< HEAD
 .proximoAnimation{
 	animation: fadeRight 1s ease 0s 1 normal forwards;
+=======
+.inputAnimation{
+    animation: fadeInRight 2s ease 0s 1 normal forwards;
+}
+
+/* REMOVER INPUT */
+@keyframes fadeOutRight {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+}
+
+.removeAnimation{
+    animation: fadeOutRight 2s ease 0s 1 normal forwards;
+>>>>>>> front_end
 }
