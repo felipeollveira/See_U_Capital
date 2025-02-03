@@ -7,34 +7,6 @@
     <link rel="stylesheet" href="../css/output.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/animations.css">
-<<<<<<< HEAD
-</head>
-<body id="capital">
-  <nav class="mt-7 w-full">
-    <a class="btn btn-ghost" href="../index.html">
-      <img src="../imgs/logo.png" width="110" alt="logo">
-    </a>
-  </nav>
-  
-  <main>
-    <div id="termo" class="flex flex-col py-10">
-      <p class="text-[30px] font-light px-96 max-2xl:text-lg max-2xl:px-72 max-sm:text-sm max-xl:px-0">
-        Nosso objetivo é ajudar você a organizar suas finanças de forma prática, proporcionando clareza sobre seus gastos. <br>
-        Para começar, faremos algumas perguntas simples. Fique à vontade para <b>compartilhar apenas o que desejar</b>
-        — todas as informações ficam exclusivamente com você.
-        <b class="font-semibold">Respeitamos sua privacidade</b> e garantimos que não coletamos ou armazenamos dados pessoais, seguindo rigorosamente a 
-        <b class="font-semibold">LGPD (Lei Geral de Proteção de Dados).</b> <br>
-        Estamos aqui para facilitar sua jornada rumo à saúde financeira. Vamos juntos?</p>        
-          
-        <button id="btnComecar" class="btn btn-comecar mx-auto mt-10 mb-10 max-2xl:mt-10 max-2xl:mb-0">VAMOS COMEÇAR?</button>
-    </div>
-
-    <form id="formulario" class="w-full mx-5 hidden flex-col" method="POST" action="/dashboard">
-      <div id="ref-ganhos" class="etapa flex-col gap-7">
-        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Ganhos,</b></h1>
-        
-        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Qual o valor total da sua renda mensal?</h2>
-=======
     <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -103,7 +75,6 @@
         <h1 class="text-4xl text-center mt-20 mb-10 max-2xl:text-3xl max-lg:text-xl">Referente a <b class="font-bold">Ganhos</b></h1>
         
         <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Qual o valor total da sua <b class="font-bold">renda mensal?</b></h2>
->>>>>>> front_end
 
         <input
           id="renda-mensal"
@@ -116,35 +87,12 @@
           placeholder="EX: 1500, 3000, 4000 (R$)" 
           required
         >
-<<<<<<< HEAD
-      
-        <h2 class="text-5xl text-start font-light mt-12 max-2xl:text-2xl max-lg:text-lg">Quanto você recebe, em média, de outras fontes além do salário principal?</h2>
-
-        <input
-          id="outras-fontes"
-          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
-          inputmode="numeric"
-          name="outras-fontes"
-          type="number" 
-          maxlength="10" 
-          oninput="this.value = this.value.slice(0, 10)"
-          placeholder="EX: 1500, 3000, 4000 (R$)" 
-          required
-        >
-      </div>
-
-      <div id="ref-despesas-residenciais1" class="hidden etapa flex-col gap-7">
-        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Despesas Residenciais,</b></h1>
-        
-        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Quanto você gasta, em média, com a conta de água?</h2>
-=======
       </div>
 
       <div id="ref-despesas-residenciais" class="flex flex-col gap-7">
         <h1 class="text-4xl text-center mt-32 mb-10 max-2xl:text-3xl max-lg:text-xl">Referente a <b class="font-semibold">Despesas Residenciais</b></h1>
         
         <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Quanto você gasta, em média, com a <b class="font-bold">conta de água</b>?</h2>
->>>>>>> front_end
 
         <input
           id="agua"
@@ -155,18 +103,11 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
-<<<<<<< HEAD
-          required
-        >
-      
-        <h2 class="text-5xl text-start font-light mt-12 max-2xl:text-2xl max-lg:text-lg">E com a conta de luz, qual é o valor aproximado?</h2>
-=======
         >
         
         <br>
 
         <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">E com a <b class="font-bold">conta de luz</b>, qual é o valor aproximado?</h2>
->>>>>>> front_end
 
         <input
           id="luz"
@@ -177,22 +118,11 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
-<<<<<<< HEAD
-          required
-        >
-      </div>
-
-      <div id="ref-despesas-residenciais2" class="hidden etapa flex-col gap-7">
-        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Despesas Residenciais,</b></h1>
-        
-        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Qual o custo mensal do seu plano de Internet?</h2>
-=======
         >
 
         <br>
         
         <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Qual o custo mensal do seu <b class="font-bold">plano de Internet</b>?</h2>
->>>>>>> front_end
 
         <input
           id="internet"
@@ -203,12 +133,6 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
-<<<<<<< HEAD
-          required
-        >
-      
-        <h2 class="text-5xl text-start font-light mt-12 max-2xl:text-2xl max-lg:text-lg">Qual é o valor médio das compras do mês?</h2>
-=======
         >
 
         <br>
@@ -229,7 +153,6 @@
         <br>
       
         <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Qual é o valor médio das <b class="font-bold">compras do mês</b>?</h2>
->>>>>>> front_end
 
         <input
           id="compras"
@@ -240,22 +163,6 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
-<<<<<<< HEAD
-          required
-        >
-      </div>
-
-      <div id="ref-saude" class="hidden etapa flex-col gap-7">
-        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Saúde,</b></h1>
-        
-        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Qual o valor médio gasto com consultas e exames médicos?</h2>
-
-        <input
-          id="exames"
-          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
-          inputmode="numeric"
-          name="exames"
-=======
         >
       </div>
 
@@ -269,23 +176,15 @@
           class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
           inputmode="numeric"
           name="consultas-exames"
->>>>>>> front_end
           type="number" 
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
-<<<<<<< HEAD
-          required
-        >
-      
-        <h2 class="text-5xl text-start font-light mt-12 max-2xl:text-2xl max-lg:text-lg">Quanto você investe mensalmente em medicamentos?</h2>
-=======
         >
         
         <br>
 
         <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Quanto você investe mensalmente em <b class="font-bold">medicamentos</b>?</h2>
->>>>>>> front_end
 
         <input
           id="medicamentos"
@@ -296,22 +195,6 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
-<<<<<<< HEAD
-          required
-        >
-      </div>
-
-      <div id="ref-lazer" class="hidden etapa flex-col gap-7">
-        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Lazer,</b></h1>
-        
-        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Quanto você gasta, em média, com viagens e passeios?</h2>
-
-        <input
-          id="lazer"
-          class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
-          inputmode="numeric"
-          name="lazer"
-=======
         >
       </div>
 
@@ -325,21 +208,10 @@
           class="input input-numeric w-[881px] h-[44px] max-2xl:w-[600px] max-lg:w-auto" 
           inputmode="numeric"
           name="viagens-passeios"
->>>>>>> front_end
           type="number" 
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
-<<<<<<< HEAD
-          required
-        >
-      </div>
-
-      <div id="ref-transporte" class="hidden etapa flex-col gap-7">
-        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Transporte,</b></h1>
-        
-        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Qual é o custo mensal com transporte (combustível, transporte público, etc.)?</h2>
-=======
         >
       </div>
 
@@ -347,7 +219,6 @@
         <h1 class="text-4xl text-center mt-32 mb-10 max-2xl:text-3xl max-lg:text-xl">Referente a <b class="font-bold">Transporte</b></h1>
         
         <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Qual é o custo mensal com <b class="font-bold">transporte</b> (combustível, transporte público, etc.)?</h2>
->>>>>>> front_end
 
         <input
           id="transporte"
@@ -358,16 +229,6 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
-<<<<<<< HEAD
-          required
-        >
-      </div>
-
-      <div id="ref-financas" class="hidden etapa flex-col gap-7">
-        <h1 class="text-4xl text-center my-14 max-2xl:text-2xl max-2xl:my-10">Referente a <b class="font-semibold">Finanças,</b></h1>
-        
-        <h2 class="text-5xl text-start font-light max-2xl:text-2xl max-lg:text-lg">Quanto você consegue economizar ou guardar por mês?</h2>
-=======
         >
       </div>
 
@@ -375,7 +236,6 @@
         <h1 class="text-4xl text-center mt-32 mb-10 max-2xl:text-3xl max-lg:text-xl">Referente a <b class="font-bold">Finanças</b></h1>
         
         <h2 class="text-3xl text-start font-light max-2xl:text-2xl max-lg:text-base">Quanto você consegue <b class="font-bold">economizar ou guardar</b> por mês?</h2>
->>>>>>> front_end
 
         <input
           id="financas"
@@ -386,28 +246,6 @@
           maxlength="10" 
           oninput="this.value = this.value.slice(0, 10)"
           placeholder="EX: 1500, 3000, 4000 (R$)" 
-<<<<<<< HEAD
-          required
-        >
-      </div>
-
-      <div class="flex m-auto my-24 gap-4 max-2xl:my-16 max-2xl:mb-8">
-        <button id="btnVoltar" class="btn btn-voltar" type="button">VOLTAR</button>
-        <button id="btnProximo" class="btn btn-proximo shadowTitulo" type="button">PRÓXIMO</button>
-        <button id="btnEnviar" type="submit" class="btn btn-proximo shadowTitulo">CALCULAR</button>
-      </div>
-    </form>
-  </main>
-
-  <footer class= "py-5 px-5">
-    <p class="text-sm text-justify font-light max-xl:text-xs">
-      ESSE SITE NÃO ARMANEZA NENHUM DADO E SEGUE TODA AS LEIS EM VIGOR DA<br class="max-xl:hidden">
-      <b class="font-bold">LGPD</b> DE ACORDO COM O <b class="font-bold">ARTIGO 153 DA LEI GERAL DE PROTEÇÃO DE DADOS</b>
-    </p>
-  </footer>
-  <script src="../js/form.js"></script>
-  <script src="../js/script.js"></script>
-=======
         >
       </div>
 
@@ -499,6 +337,5 @@
   <script src="../js/form.js"></script>
   <script src="../js/script.js"></script>
   <script src="../js/financial-report-generator.js"></script>
->>>>>>> front_end
 </body>
 </html>
