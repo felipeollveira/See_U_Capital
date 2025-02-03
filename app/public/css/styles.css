@@ -21,20 +21,22 @@ body{
     align-items: center;
     color: white;
     font-family: Montserrat, Arial, Helvetica, sans-serif;
-    
 }
 
 body#home{
+    background: linear-gradient(180deg, #0A362A -55.42%, #01050F 90%);
     background: url(../imgs/noise.png) center no-repeat, url(../imgs/bg_home.png) center no-repeat;
     background-size: cover;
 }
 
 body#capital{
+    background: linear-gradient(180deg, #0A362A -55.42%, #01050F 90%);
     background: url(../imgs/noise.png) center no-repeat, url(../imgs/bg_capital.png) center no-repeat;
     background-size: cover;
 }
 
 body#sobre, body#dicas{
+    background: linear-gradient(180deg, #0A362A -55.42%, #01050F 90%);
     background: url(../imgs/noise.png) center no-repeat, url(../imgs/bg_sobre-dicas.png) center no-repeat;
     background-size: cover;
 }

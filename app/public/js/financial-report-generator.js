@@ -83,32 +83,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // Calcular total de outros
         const outrosTotal = formData.outros1 + formData.outros2 + formData.outros3 + formData.outros4 + formData.outros5;        
 
-        // // Calcular totais e identificar 3 principais despesas
-        // const totalReceita = formData.rendaMensal;
-        // const despesasArray = [
-        //     { nome: 'Compras', valor: formData.compras },
-        //     { nome: 'Água', valor: formData.agua },
-        //     { nome: 'Luz', valor: formData.luz },
-        //     { nome: 'Internet', valor: formData.internet },
-        //     { nome: 'Exames', valor: formData.exames },
-        //     { nome: 'Medicamentos', valor: formData.medicamentos },
-        //     { nome: 'Lazer', valor: formData.lazer },
-        //     { nome: 'Transporte', valor: formData.transporte }
-        // ];
-
-        // Ordenar despesas do maior para o menor
-        // const despesasOrdenadas = despesasArray.sort((a, b) => b.valor - a.valor);
-        // const tresMaioresDespesas = despesasOrdenadas.slice(0, 3);
-
         // Criar área para gráficos no final da página
         const graficosDiv = document.createElement('div');
         graficosDiv.id = 'graficos-financeiros';
+        graficosDiv.classList.add('p-2');
         
         graficosDiv.innerHTML = `
-            <canvas id="grafico-receitas" class="m-auto w-[400px] h-[300px] max-sm:w-[300px] max-sm:h-[200px]"></canvas>
+            <canvas id="grafico-receitas" class="m-auto w-[380px] h-[300px] max-sm:w-[280px] max-sm:h-[200px]"></canvas>
             <br>
+            <canvas id="grafico-despesas" class="m-auto w-[400px] h-[300px] max-sm:w-[280px]"></canvas>
             <br>
-            <canvas id="grafico-despesas" class="m-auto w-[400px] h-[300px] max-sm:w-[300px] max-sm:h-[250px]"></canvas>
+            <div class="text-start px-2"> 
+                <h4 class="max-sm:text-xs">Renda Mensal: <b class="font-bold">R$${formData.rendaMensal}</b></h4>
+                <h4 class="max-sm:text-xs">Total de Gastos: <b class="font-bold">R$${despesasResidenciais + despesasSaude + lazer + transporte + economia + outros}</b></h4>
+            </div>
         `;
         graficos.appendChild(graficosDiv);
         boxGrafico.classList.add('flex');
@@ -162,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         labels: {
                             color: '#ffffff', // Cor dos labels fica aq
                             font: {
-                                weight: '400' ,
+                                weight: '500' ,
                                 size: window.innerWidth < 640 ? 9 : 14,
                                 family: 'Montserrat, Arial, Helvetica, sans-serif'
                             }
@@ -238,12 +226,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         label: 'Outros',
                         data: [outrosTotal],
                         backgroundColor: chartColors.outros
-                    },
-                    {
-                        label: 'Renda Mensal',
-                        data: [formData.rendaMensal],
-                        backgroundColor: chartColors.receitas
                     }
+                    // {
+                    //     label: 'Renda Mensal',
+                    //     data: [formData.rendaMensal],
+                    //     backgroundColor: chartColors.receitas
+                    // }
                 ]
             },
             options: {
@@ -284,6 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     y: {
                         beginAtZero: true,
                         ticks: {
+                            color: '#ffffff', // Deixa os valores brancos
                             callback: function(value) {
                                 return 'R$ ' + value.toFixed(2);
                             }
