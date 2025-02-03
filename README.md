@@ -1,6 +1,6 @@
 # SEE U CAPITAL
 
-Possue o objetivo de promover a conscientização e o controle financeiro por meio de uma plataforma digital intuitiva, permitindo que os usuários registrem suas despesas e obtenham relatórios personalizados para gerenciar melhor seus recursos .
+Possue o objetivo de promover a conscientização e o controle financeiro por meio de uma plataforma digital intuitiva, permitindo que os usuários registrem suas despesas e obtenham relatórios personalizados para gerenciar melhor seus recursos.
 
 ## Principais Ferramentas
 
