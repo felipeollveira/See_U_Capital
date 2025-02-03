@@ -1,2 +1,2 @@
 # See_U_Capital
-PROJETO INTEGRADOR SENAC - Sistema para controle de finanças front
+PROJETO INTEGRADOR SENAC - Sistema para controle de finanças
