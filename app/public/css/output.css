@@ -1670,6 +1670,10 @@ html {
   height: 100%;
 }
 
+.h-\[400px\] {
+  height: 400px;
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -1684,6 +1688,10 @@ html {
 
 .w-96 {
   width: 24rem;
+}
+
+.w-\[380px\] {
+  width: 380px;
 }
 
 .w-\[400px\] {
@@ -1779,6 +1787,10 @@ html {
   padding: 2.5rem;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -1790,6 +1802,11 @@ html {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-20 {
@@ -1953,16 +1970,19 @@ body{
 }
 
 body#home{
+  background: linear-gradient(180deg, #0A362A -55.42%, #01050F 90%);
   background: url(../imgs/noise.png) center no-repeat, url(../imgs/bg_home.png) center no-repeat;
   background-size: cover;
 }
 
 body#capital{
+  background: linear-gradient(180deg, #0A362A -55.42%, #01050F 90%);
   background: url(../imgs/noise.png) center no-repeat, url(../imgs/bg_capital.png) center no-repeat;
   background-size: cover;
 }
 
 body#sobre, body#dicas{
+  background: linear-gradient(180deg, #0A362A -55.42%, #01050F 90%);
   background: url(../imgs/noise.png) center no-repeat, url(../imgs/bg_sobre-dicas.png) center no-repeat;
   background-size: cover;
 }
@@ -2132,6 +2152,12 @@ input[type="number"]::-webkit-outer-spin-button {
   background: linear-gradient(144deg, rgba(78, 155, 127, 0.18) 0%, rgba(21, 38, 64, 0.18) 100%);
 }
 
+@media (max-width: 1550px) {
+  .max-\[1550px\]\:text-\[39px\] {
+    font-size: 39px;
+  }
+}
+
 @media not all and (min-width: 1536px) {
   .max-2xl\:my-16 {
     margin-top: 4rem;
@@ -2154,11 +2180,6 @@ input[type="number"]::-webkit-outer-spin-button {
   .max-2xl\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .max-2xl\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 
   .max-2xl\:text-xl {
@@ -2263,10 +2284,6 @@ input[type="number"]::-webkit-outer-spin-button {
     height: 200px;
   }
 
-  .max-sm\:h-\[250px\] {
-    height: 250px;
-  }
-
   .max-sm\:h-full {
     height: 100%;
   }
@@ -2275,8 +2292,8 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100%;
   }
 
-  .max-sm\:w-\[300px\] {
-    width: 300px;
+  .max-sm\:w-\[280px\] {
+    width: 280px;
   }
 
   .max-sm\:w-full {
@@ -2296,6 +2313,11 @@ input[type="number"]::-webkit-outer-spin-button {
   .max-sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .max-sm\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 

@@ -56,20 +56,3 @@
 .inputAnimation{
     animation: fadeInRight 2s ease 0s 1 normal forwards;
 }
-
-/* REMOVER INPUT */
-@keyframes fadeOutRight {
-	0% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-
-	100% {
-		opacity: 0;
-		transform: translateX(50px);
-	}
-}
-
-.removeAnimation{
-    animation: fadeOutRight 2s ease 0s 1 normal forwards;
-}
